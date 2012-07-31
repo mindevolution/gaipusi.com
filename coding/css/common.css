@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+/*-----------------------------------*/
+
+body { font-size:12px; color: #9a9a9a; font-family: Arial, Helvetica, sans-serif,"宋体", "黑体"; background:#a32f4b url(../img/bg-body.gif) repeat-x; }
+#page_header { width:1034px; margin:0 auto; }
+#logo {margin:17px 0px 0px 31px;}
+
+.nav { padding:5px 5px 0px 5px; background:url(../img/shadow-menu.png) no-repeat;}
+.nav ul { width:1020px; height:41px; background-color:#f0ddbc; padding-left:4px; font-size:14px; color:#432f0b; }
+.nav li { position:relative; float:left;}
+.nav li a { display:inline-block; height:41px; line-height:41px; padding:0px 30px; font-size:14px; font-weight:bold; color:#432f0b;}
+.nav li a:hover { color:#bd3455; background:url(../img/arrow-h.gif) no-repeat center 37px;}
+
+.nav ul ul { display:inline-block; width:108px; height:auto; padding:none; padding-left:0px; position:absolute; z-index:100; top:41px; left:7px; background:#b13e5a;}
+.nav ul ul li { display:inline-block; width:108px; float:none; padding:0px;}
+.nav ul ul a { display:inline-block; text-align:center; width:108px; height:36px; line-height:36px; padding:0px; border-top:#fff solid 1px; font-weight:normal; color:#fff;}
+.nav li li.first a { border-top:#b13e5a solid 1px;}
+.nav li li.last a { border-top:#fff solid 1px; border-bottom:#b13e5a solid 1px;}
+.nav ul ul a:hover { background:#f0ddbc; color:#432f0b;}
+
+#page_footer { width:1034px; margin:12px auto 68px auto; text-align:center; color:#f0a4b6; }

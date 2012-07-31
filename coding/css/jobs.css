@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 内容开始 */
+.teachers { padding-top:16px;  border-bottom:solid 1px #b3b3b3;}
+.teachers h1 { font-family:Tahoma, Geneva, sans-serif; font-size:22px; font-weight:bold; height:50px; line-height:50px; text-align:center; color:#333;}
+.teachers p { font-family:Tahoma, Geneva, sans-serif; font-size:14px; line-height:20px; color:#333; background-color:#f7f7f7; font-weight:normal; padding:10px;}
+
+.teachers ul { margin:16px 0px 0px 0px;}
+.teachers li { font-family:Tahoma, Geneva, sans-serif; font-size:14px; border-top:1px solid #ccc; }
+.teachers li a { display:block; height:20px; line-height:20px; padding:10px; color:#000;}
+.teachers li a:hover { color:#c31c43; background-color:#fcfcfc;}
+
+/* 页码开始 */
+.page { width:404px; margin:0 auto; padding:16px 0px 26px 0px; text-align:center;}
+.page li { float:left; overflow:hidden; padding:0px 4px; width:40px; height:28px; line-height:26px; font-family:Tahoma, Geneva, sans-serif;}
+.page li a { display:block; background:url(../img/btn-subpage.png) no-repeat; height:28px; color:#333;}
+.page li a:hover { display:block; color:#ab304d; background:url(../img/btn-subpage.png) no-repeat 0px -28px;}
+.page .Wider { width:50px; }
+.page .Wider a { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -56px;}
+.page .Wider a:hover { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -84px;}

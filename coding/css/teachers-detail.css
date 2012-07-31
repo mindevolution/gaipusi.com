@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 内容开始 */
+.teachers { padding-top:16px;}
+.teachers h1 { font-family:"微软雅黑"; font-size:22px; font-weight:bold; height:38px; line-height:38px; text-align:center; color:#ab304d; background-color:#f7f7f7;}
+.teachers p { font-family:"宋体", "黑体"; font-size:12px; line-height:18px; text-indent:24px; color:#999; margin:12px 0px;}
+
+/* 主体 */
+.teachers-main { width:741px; padding:9px; border:1px solid #ccc; margin-bottom:16px;}
+.teachers-main img { float:left;}
+.article { float:right; width:557px;}
+.article h1 { font-family:Tahoma, Geneva, sans-serif; font-size:18px; height:42px; line-height:42px; background:none; text-align:left;}
+.article ul { border-top:solid 1px #ccc; border-bottom:solid 1px #ccc; padding:7px 0px;}
+.article li { font-size:12px; line-height:20px; color:#000;}
+.article p { font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#333; text-indent:0px;}
+.article p span { font-weight:bold;}
+
+/* 外教列表 */
+.teacher-list li { float:left; padding-right:16px;}
+.teacher-list li.li-last { padding-right:0px;}
+.teacher-list li div { width:225px; height:109px; padding:9px; margin-bottom:16px; background:url(../img/bg-teacher.png);}
+.teacher-list li div:hover { background:none; width:223px; height:107px; border: solid 1px #ccc;}
+.teacher-list li img { float:left; padding-right:10px;}
+.teacher-list li dl { float:left; width:106px;}
+.teacher-list li dt a { display:block; font-family:Tahoma, Geneva, sans-serif; font-size:14px; line-height:18px; font-weight:bold; color:#464646; margin-bottom:7px;}
+.teacher-list li dt a:hover { color:#ab304d;}
+.teacher-list li dd { font-family:"宋体"; font-size:12px; line-height:16px; font-weight:normal; color:#999;}

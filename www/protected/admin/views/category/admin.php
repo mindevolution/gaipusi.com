@@ -47,6 +47,7 @@ $('.search-form form').submit(function(){
 		'guid',
 		'name',
 		'lang',
+		'list_layout',
 		array(
 			'class'=>'CButtonColumn',
 			'header' => '操作',

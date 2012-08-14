@@ -6,7 +6,7 @@ Yii::setPathOfAlias('backend', $backend);
 $frontendArray=require($frontend.'/config/main.php');
 
 $backendArray=array(
-    'name'=>'ÍøÕ¾ºóÌ¨¹ÜÀíÏµÍ³',
+    'name'=>'åŒ—äº¬ç›–æ™®æ–¯æ–‡åŒ–å‘å±•æœ‰é™å…¬å¸',
     'basePath' => $frontend,
     'controllerPath' => $backend.'/controllers',
     'viewPath' => $backend.'/views',
@@ -19,7 +19,7 @@ $backendArray=array(
         'application.extensions.*',
         'application.extensions.nestedset.*',
         'backend.models.*',
-        'backend.components.*', //ÕâÀïµÄÏÈºóË³ĞòÒ»¶¨Òª¸ãÇå
+        'backend.components.*', //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Èºï¿½Ë³ï¿½ï¿½Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
     ),
     'components'=>array(
                 'user'=>array(

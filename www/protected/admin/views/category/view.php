@@ -26,5 +26,6 @@ $this->menu=array(
 		'guid',
 		'name',
 		'lang',
+		'list_layout',
 	),
 )); ?>

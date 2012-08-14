@@ -48,6 +48,12 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'list_layout'); ?>
+		<?php echo $form->textField($model,'list_layout',array('size'=>10,'maxlength'=>10)); ?>
+		<?php echo $form->error($model,'list_layout'); ?>
+	</div>
+
 <div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

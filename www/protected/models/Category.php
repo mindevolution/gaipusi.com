@@ -9,6 +9,7 @@
  * @property integer $guid
  * @property string $name
  * @property string $lang
+ * @property string $list_layout
  */
 class Category extends CActiveRecord
 {
@@ -38,12 +39,13 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('guid, name, lang', 'required'),
+			array('guid, name, lang, list_layout', 'required'),
 			array('parent_id, guid', 'numerical', 'integerOnly'=>true),
 			array('name, lang', 'length', 'max'=>100),
+			array('list_layout', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, parent_id, guid, name, lang', 'safe', 'on'=>'search'),
+			array('id, parent_id, guid, name, lang, list_layout', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -69,6 +71,7 @@ class Category extends CActiveRecord
 			'guid' => 'Guid',
 			'name' => '分类名',
 			'lang' => '语言',
+			'list_layout' => '列表布局',
 		);
 	}
 
@@ -88,6 +91,7 @@ class Category extends CActiveRecord
 		$criteria->compare('guid',$this->guid);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('lang',$this->lang,true);
+		$criteria->compare('list_layout',$this->list_layout,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

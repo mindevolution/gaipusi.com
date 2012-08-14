@@ -113,7 +113,7 @@ class SiteController extends Controller
 	}
 	
 	  /**
-         * ¹ÜÀí¿ò¼ÜÒ³
+         * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³
          */
         public function actionDefault()
         {
@@ -125,7 +125,7 @@ class SiteController extends Controller
                 }
         }
     /**
-         * ¹ÜÀí¿ò¼ÜÒ³ Head
+         * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ Head
          */
         public function actionHead()
         {
@@ -137,7 +137,7 @@ class SiteController extends Controller
                 }
         }
     /**
-         * ¹ÜÀí¿ò¼ÜÒ³ left
+         * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ left
          */
         public function actionLeft()
         {

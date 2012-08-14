@@ -1,6 +1,6 @@
 <?php
 
-class SiteController extends Controller
+class SiteController extends MController
 {
 	/**
 	 * Declares class-based actions.
@@ -11,7 +11,7 @@ class SiteController extends Controller
 			// captcha action renders the CAPTCHA image displayed on the contact page
 			'captcha'=>array(
 				'class'=>'CCaptchaAction',
-				'backColor'=>0xFFFFFF,
+				'backColor'=>0xEBF4FB,
 			),
 			// page action renders "static" pages stored under 'protected/views/site/pages'
 			// They can be accessed via: index.php?r=site/page&view=FileName
@@ -106,4 +106,9 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+	
+
+
+ 
+     
 }

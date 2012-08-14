@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 内容开始 */
+.article-list li { padding:20px 0px; border-bottom:1px solid #e3e3e3;}
+.article-list li img { float:left;}
+.article { float:right; width:632px;}
+.article h2 { font-size:14px; font-weight:bold; line-height:20px; margin-bottom:10px;}
+.article h2 a { display:block; color:#333;}
+.article h2 a:hover { color:#ab304d;}
+.article h6 { line-height:18px; margin-bottom:5px; font-family:"宋体"; font-size:12px; font-weight:normal; color:#999;}
+.article h6 span { font-family:Tahoma, Geneva, sans-serif;}
+.article p { line-height:18px; font-family:"宋体"; font-size:12px; font-weight:normal; color:#333;}
+
+li.no-pic .article { width:100%;}
+
+/* 页码开始 */
+.page { width:404px; height:28px; margin:0 auto; padding:10px 0px 30px 0px; text-align:center;}
+.page li { float:left; overflow:hidden; padding:0px 4px; width:40px; height:28px; line-height:26px; font-family:Tahoma, Geneva, sans-serif;}
+.page li a { display:block; background:url(../img/btn-subpage.png) no-repeat; height:28px; color:#333;}
+.page li a:hover { display:block; color:#ab304d; background:url(../img/btn-subpage.png) no-repeat 0px -28px;}
+.page .Wider { width:50px; }
+.page .Wider a { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -56px;}
+.page .Wider a:hover { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -84px;}

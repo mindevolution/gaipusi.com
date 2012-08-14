@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 内容开始 */
+.teachers { padding-top:16px; border-bottom:solid 1px #b3b3b3;}
+.teachers h1 { font-family:"微软雅黑"; font-size:22px; font-weight:bold; height:38px; line-height:38px; text-align:center; color:#ab304d; background-color:#f7f7f7;}
+.teachers p { font-family:"宋体", "黑体"; font-size:12px; line-height:18px; text-indent:24px; color:#999; margin:12px 0px;}
+.teachers li { float:left; padding-right:16px;}
+.teachers li.li-last { padding-right:0px;}
+.teachers li div { width:225px; height:109px; padding:9px; margin-bottom:16px; background:url(../img/bg-teacher.png) no-repeat;}
+.teachers li div:hover { width:225px; height:109px; background:url(../img/bg-teacher.png) 0px -127px no-repeat;}
+.teachers li img { float:left; padding-right:10px;}
+.teachers li dl { float:left; width:106px;}
+.teachers li dt a { display:block; font-family:Tahoma, Geneva, sans-serif; font-size:14px; line-height:18px; font-weight:bold; color:#464646; margin-bottom:7px;}
+.teachers li dt a:hover { color:#ab304d;}
+.teachers li dd { font-family:"宋体"; font-size:12px; line-height:16px; font-weight:normal; color:#999;}
+
+/* 页码开始 */
+.page { width:404px; margin:0 auto; padding:10px 0px; text-align:center;}
+.page li { float:left; overflow:hidden; padding:0px 4px; width:40px; height:28px; line-height:26px; font-family:Tahoma, Geneva, sans-serif;}
+.page li a { display:block; background:url(../img/btn-subpage.png) no-repeat; height:28px; color:#333;}
+.page li a:hover { display:block; color:#ab304d; background:url(../img/btn-subpage.png) no-repeat 0px -28px;}
+.page .Wider { width:50px; }
+.page .Wider a { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -56px;}
+.page .Wider a:hover { background:none; background:url(../img/btn-subpage.png) no-repeat 0px -84px;}

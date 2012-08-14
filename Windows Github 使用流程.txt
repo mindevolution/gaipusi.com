@@ -1,0 +1,13 @@
+?1. 打开git命令行
+2. 改变当前目录到工作目录
+	cd gaipusi.com/gaipusi.com
+3. 更新本地程序到最新版本
+	git fetch upstream
+	git merge upstream/master
+4. 修改本地代码
+5. 提交本地代码
+	git add .
+	git commit -m "说明文字"
+6. 上传本地代码
+	git pull
+	git push origin master

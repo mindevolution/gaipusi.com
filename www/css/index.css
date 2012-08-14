@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+#content { z-index:-100; width:1024px; height:458px; margin:0 auto; padding:0px 5px 0px 5px; background:url(../img/bg-main.jpg) no-repeat 5px 0px;}
+.subnav { float:left; width:273px; padding:29px 0px 0px 39px;}
+.subnav h3 { padding-left:10px; margin-bottom:24px; height:30px; line-height:30px; background:url(../img/bg-jieshao.png) no-repeat; font-size:16px; font-weight:bold; color:#fff;}
+
+.subnav-ul li { margin-bottom:9px;}
+.subnav-ul a { display:block; width:232px; height:50px; overflow:hidden;}
+.yinghui a { background:url(../img/btn-subnav.gif) no-repeat 0px 0px;}
+.yinghui a:hover { background:url(../img/btn-subnav.gif) no-repeat 0px -50px;}
+.peixun a { background:url(../img/btn-subnav.gif) no-repeat 0px -100px;}
+.peixun a:hover { background:url(../img/btn-subnav.gif) no-repeat 0px -150px;}
+.zhaopin a { background:url(../img/btn-subnav.gif) no-repeat 0px -200px;}
+.zhaopin a:hover { background:url(../img/btn-subnav.gif) no-repeat 0px -250px;}
+.youxue a { background:url(../img/btn-subnav.gif) no-repeat 0px -300px;}
+.youxue a:hover { background:url(../img/btn-subnav.gif) no-repeat 0px -350px;}
+
+.subnav .lang-ul { padding:44px 0px 0px 26px; height:28px;}
+.lang-ul li { float:left; padding-right:20px; text-align:center;}
+.lang-ul li a { display:inline-block; width:80px; height:28px; line-height:28px; overflow:hidden; background:url(../img/btn-block.png) repeat-x; color:#dbdbdb;}
+.lang-ul li a:hover { background:url(../img/btn-block.png) repeat-x 0px -28px;}
+
+#content .video { float:left; padding-top:79px;}
+#content .video .pic,.video .video-play { width:418px; height:263px; margin-bottom:22px;}
+#content .video ul { padding-left:15px;}
+#content .video li { float:left; padding-right:45px;}
+#content .video li.last { padding-right:0px;}
+#content .video li a { display:inline-block; height:28px; line-height:28px; overflow:hidden; width:100px; background:url(../img/btn-round.png) no-repeat; color:#dbdbdb; text-align:center;}
+#content .video li a:hover { background:url(../img/btn-round.png) no-repeat 0px -28px;}
+
+.contact { float:right; width:294px;}
+.contact dl { text-align:center; margin:20px 0px;}
+.contact dl dt { font-family:"微软雅黑"; font-size:16px; font-weight:bold; color:#ccc;}
+.contact dl dd { font-family:Tahoma, Geneva, sans-serif; font-size:18px; font-weight:bold; color:#fff;}
+.zixun { padding-left:107px;}
+.zixun a{ display:inline-block; width:80px; height:28px; line-height:28px; overflow:hidden; background:url(../img/btn-block.png) repeat-x; color:#dbdbdb; text-align:center;}
+.zixun a:hover { background:url(../img/btn-block.png) repeat-x 0px -28px;}
+
+.shadow-main { position:relative; z-index:-100; width:1054px; height:37px; margin:0 auto; margin-top:-35px;}

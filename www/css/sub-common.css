@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; }
+ol, ul { list-style: none; }
+img { border:none;}
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+.clear { clear:both;}
+.left { float:left;}
+.right { float:right;}
+/*-----------------------------------*/
+
+body { font-size:12px; color: #9a9a9a; font-family: Arial, Helvetica, sans-serif,"宋体", "黑体"; background:#d6d6d6 url(../img/bg-body-sub.gif) repeat-x; }
+#page_header { width:1034px; margin:0px auto; }
+#logo {margin:17px 0px 0px 31px;}
+
+/* 顶部导航开始 */
+.nav { padding:5px 5px 0px 5px; background:url(../img/shadow-menu.png) no-repeat;}
+.nav ul { width:1020px; height:41px; background-color:#fff7db; padding-left:4px; font-size:14px; color:#432f0b; }
+.nav li { position:relative; float:left;}
+.nav li a { display:inline-block; height:41px; line-height:41px; padding:0px 30px; font-size:14px; font-weight:bold; color:#432f0b;}
+.nav li a:hover { color:#bd3455; background:url(../img/arrow-h.gif) no-repeat center 37px;}
+
+.nav ul ul { display:none; width:108px; height:auto; padding:none; padding-left:0px; position:absolute; z-index:100; top:41px; left:7px; background:#b13e5a;}
+.nav ul ul li { display:inline-block; width:108px; float:none; padding:0px;}
+.nav ul ul a { display:inline-block; text-align:center; width:108px; height:36px; line-height:36px; padding:0px; border-top:#fff solid 1px; font-weight:normal; color:#fff;}
+.nav li li.first a { border-top:#b13e5a solid 1px;}
+.nav li li.last a { border-top:#fff solid 1px; border-bottom:#b13e5a solid 1px;}
+.nav ul ul a:hover { background:#FFF7DB; color:#432f0b;}
+
+/* 主体开 始*/
+#content { z-index:-100; width:1024px; margin:0 auto; padding:0px; background:#fff url(../img/bg-side.gif) repeat-y 0px 0px; border-top:3px solid #356a19;}
+
+/* 侧边栏开始 */
+.side { float:left; width:225px; height:100%; background:#f2f2f2; }
+.side h2 { height:35px; padding-top:5px; text-align:center; background:#366a19; font-family:"微软雅黑","黑体"; font-size:20px; color:#fff; font-weight:normal;}
+.nav-side h2 { padding-top:15px;}
+.side h2 img { margin:0px 8px;}
+.nav-side ul { margin:26px auto; padding-left:89px; background:url(../img/line-side.gif) repeat-y 74px 0px;}
+.nav-side li a { display:block; height:40px; line-height:40px; color:#666;}
+.nav-side li a:hover { color:#c31c43;}
+.side form { padding-left:10px; margin-bottom:20px;}
+.side form input { width:203px; height:28px; border:solid 1px #ccc; font-size:14px; line-height:28px; background:#fff url(../img/search-logo.gif) no-repeat center right;}
+.side dl { margin-bottom:20px;}
+.side dt { margin-bottom:10px;}
+.side dd { padding:0px 15px;}
+.side dd a { display:block; padding-left:15px; background:url(../img/dot.png) no-repeat 0px center; height:24px; line-height:24px; color:#000;}
+.side dd a:hover { color:#c31c43;}
+.side dd p { line-height:18px; padding:3px; color:#000;}
+.zixun a { display:block; width:100%; height:41px; line-height:38px; text-align:center; background:url(../img/btn-subpage.png) no-repeat 52px -112px; font-family:"微软雅黑"; font-size:16px; font-weight:normal; color:#fff; margin-bottom:20px;}
+.zixun a:hover { background:url(../img/btn-subpage.png) no-repeat 52px -153px;}
+
+/*内容位置*/
+.path { width: 761px; float: right; padding-right: 18px;}
+.path ul { height:14px; padding:24px 0px 8px 0px; border-bottom:1px solid #b3b3b3;}
+.path ul a { color:#b3b3b3;}
+.path ul a:hover { color:#c31c43;}
+.path-l { float:left; font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#999;}
+.path-r { float:right; padding-left:12px; background:url(../img/back.gif) no-repeat left center;}
+
+/* 内容开始 */
+.main { width:761px; float:right; padding-right:18px;} 
+
+
+/* 底部开始 */
+.shadow-main { position:relative; z-index:-100; width:1054px; height:37px; margin:0 auto; top:-20px;}
+#page_footer { position:relative; z-index:-200; background:#b13e5a url(../img/bg-body-sub.gif) repeat-x; top:-65px; }
+#page_footer p { width:1034px; height:60px; margin:0 auto; padding-top:55px; text-align:center; color:#f0a4b6; }

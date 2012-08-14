@@ -25,13 +25,27 @@ class ArticleController extends MController
             $criteria = new CDbCriteria();
             if($cid)
             {
+							  // 判断是否是根目录id，如果是根目录则搜索所有的该下面的文章
                 $cid = (int) $cid;
-                $criteria->condition = "cat_id = " . $cid;
+								$category = Category::model()->findByPk($cid);
+								if(! $category->parent_id) {// 如果parent_id为空或者是null，则是根目录
+								    $sub_category_arr = array();
+								    // 搜索所有的子目录
+										$sub_categories = Category::model()->findAll('parent_id=:p_id',
+											array(':p_id' => $cid));
+										foreach($sub_categories as $val) {
+											   $sub_category_arr[] = $val->id;
+										}
+										$condition = "cat_id in (" .implode(',', $sub_category_arr).')';
+								} else {
+										$condition = "cat_id = " . $cid;
+								}
+                $criteria->condition = $condition;
             }
             $criteria->order = 'id desc';
             $count = Article::model()->count($criteria);
             $pager = new CPagination($count);
-            $pager->pageSize = 6;
+            $pager->pageSize = 3;
             $pager->applyLimit($criteria);
             $articles = Article::model()->findAll($criteria);
     

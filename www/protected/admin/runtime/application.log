@@ -2229,3 +2229,51 @@ REQUEST_URI=/clients/gaipusi.com/www/admin.php?r=category/update&id=10
 in /var/www/clients/gaipusi.com/www/protected/admin/views/category/_form.php (57)
 in /var/www/clients/gaipusi.com/www/protected/admin/views/category/update.php (21)
 in /var/www/clients/gaipusi.com/www/protected/admin/controllers/CategoryController.php (103)
+2012/08/14 11:31:04 [error] [php] Undefined variable: _SESSION (/var/www/clients/gaipusi.com/www/protected/admin/views/layouts/admin.php:23)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(785): SiteController->renderFile()
+#1 /var/www/clients/gaipusi.com/www/protected/admin/controllers/SiteController.php(102): SiteController->render()
+#2 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): SiteController->runAction()
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): SiteController->runActionWithFilters()
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): SiteController->run()
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#8 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#9 /var/www/clients/gaipusi.com/www/admin.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/admin.php
+in /var/www/clients/gaipusi.com/www/protected/admin/views/layouts/admin.php (23)
+in /var/www/clients/gaipusi.com/www/protected/admin/controllers/SiteController.php (102)
+in /var/www/clients/gaipusi.com/www/admin.php (13)
+2012/08/14 11:33:03 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "data".' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/protected/config/globals.php(67): CComponent->__call('data', Array)
+#1 /var/www/clients/gaipusi.com/www/protected/config/globals.php(67): CWebUser->data()
+#2 /var/www/clients/gaipusi.com/www/protected/admin/controllers/SiteController.php(84): isLogin()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('')
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/clients/gaipusi.com/www/admin.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/clients/gaipusi.com/www/admin.php
+---
+2012/08/14 11:35:04 [error] [exception.CException] exception 'CException' with message 'CWebUser and its behaviors do not have a method or closure named "data".' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/protected/config/globals.php(67): CComponent->__call('data', Array)
+#1 /var/www/clients/gaipusi.com/www/protected/config/globals.php(67): CWebUser->data()
+#2 /var/www/clients/gaipusi.com/www/protected/admin/controllers/SiteController.php(85): isLogin()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(50): SiteController->actionLogin()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('')
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#10 /var/www/clients/gaipusi.com/www/admin.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/clients/gaipusi.com/www/admin.php
+---

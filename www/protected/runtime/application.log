@@ -3574,3 +3574,47 @@ Stack trace:
 REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
 HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list&cid=2
 ---
+2012/08/14 11:19:04 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ().
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (46)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 11:19:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ()' in /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(1535): CDbCommand->queryScalar()
+#2 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(46): CActiveRecord->count(Object(CDbCriteria))
+#3 [internal function]: ArticleController->actionList('12')
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#11 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/12
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/16
+---
+2012/08/14 11:19:10 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ().
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (46)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 11:19:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ()' in /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(1535): CDbCommand->queryScalar()
+#2 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(46): CActiveRecord->count(Object(CDbCriteria))
+#3 [internal function]: ArticleController->actionList('13')
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#11 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/13
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/16
+---

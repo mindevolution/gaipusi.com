@@ -18,9 +18,9 @@
 
 	<body>
 		<div id="top">
-			<div class="top_logo"></div>
+		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
 			<div class="top_bg">
-				<div class="font-1"><?= $_SESSION["admin_name"] ?> 您好，<!--现在时间是： <span id="js_get_cur_time"></span>--> &nbsp;&nbsp;<a target="_blank" href="../">访问首页</a> | <a href="logout.php">退出系统</a></div>
+				<div class="font-1"> 您好，<!--现在时间是： <span id="js_get_cur_time"></span>--> &nbsp;&nbsp;<a target="_blank" href="../">访问首页</a> | <a href="logout.php">退出系统</a></div>
 			</div>
 		</div>
 		<div style="clear:both;"></div>
@@ -77,7 +77,8 @@
 
 					</ul>
 				</div>
-			</div>    <div class="connect_right">
+			</div> 
+			<div class="connect_right">
 				<?php if (isset($this->breadcrumbs)): ?>
 					<?php
 					$this->widget('zii.widgets.CBreadcrumbs', array(
@@ -85,6 +86,20 @@
 					));
 					?><!-- breadcrumbs -->
 				<?php endif ?>
+			<div class="span-5 last">
+				<div id="sidebar">
+				<?php
+					$this->beginWidget('zii.widgets.CPortlet', array(
+						'title'=>'Operations',
+					));
+					$this->widget('zii.widgets.CMenu', array(
+						'items'=>$this->menu,
+						'htmlOptions'=>array('class'=>'operations'),
+					));
+					$this->endWidget();
+				?>
+				</div><!-- sidebar -->
+			</div>
 				<?php echo $content; ?>
 				<div class="clearfloat"></div>
 			</div>

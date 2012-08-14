@@ -5,7 +5,6 @@ class SiteController extends Controller
 
 	public $defaultAction = 'login';
 
-	public $layout='//layouts/column2';
 	
 	/**
 	 * Declares class-based actions.
@@ -82,6 +81,11 @@ class SiteController extends Controller
 	 */
 	public function actionLogin()
 	{
+		
+		if(Yii::app()->user->getId())
+		{
+			redirect('article');
+		}
 		$model=new LoginForm;
 
 		// if it is ajax validation request

@@ -50,7 +50,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'list_layout'); ?>
-		<?php echo $form->textField($model,'list_layout',array('size'=>10,'maxlength'=>10)); ?>
+		<?php
+		?>
+		<?php echo $form->dropDownList($model,'list_layout',ZHtml::enumItem($model, 'list_layout'),array(
+                    'options'=>array(
+                        'empty' => array('selected'=>true),
+                    )
+                )); ?>
 		<?php echo $form->error($model,'list_layout'); ?>
 	</div>
 

@@ -102,4 +102,9 @@ class Category extends CActiveRecord
 	{
 		return CHtml::listData(Category::model()->findAll('parent_id=:parent_id',array(':parent_id'=>0)),'id','name');
 	}
+
+	public function getLayoutList() 
+	{
+		return 'layout list';
+	}
 }

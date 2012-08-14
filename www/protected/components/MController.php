@@ -17,6 +17,8 @@ class MController extends Controller {
 		public $category;
 		public $sub_category;
 
+		public $parent_id;
+
   	public $breadcrumb_data = array(); 
 
     public function __construct($id, $module = null) 

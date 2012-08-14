@@ -6,6 +6,7 @@ class ArticleController extends MController
 	public function actionView($id)
 	{
             add_css('css/article.css');
+						Article::hitsPlus($id);
             $article = Article::model()->find(array(
                 'condition' => 'id=:id',
                 'order' => 'id desc',
@@ -13,6 +14,7 @@ class ArticleController extends MController
             ));
 						// 得到当前的分类和子分类
 						$cid = $article->cat_id;
+						$this->parent_id = $article->cat_id;
 						$this->category = CategoryHelper::getCategory($cid);
 						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
@@ -40,6 +42,7 @@ class ArticleController extends MController
 								// Add css by category
 								CssHelper::addListCss($category);
 								if(! $category->parent_id) {// 如果parent_id为空或者是null，则是根目录
+										$this->parent_id = $category->id;
 								    $sub_category_arr = array();
 								    // 搜索所有的子目录
 										$sub_categories = Category::model()->findAll('parent_id=:p_id',
@@ -49,6 +52,7 @@ class ArticleController extends MController
 										}
 										$condition = "cat_id in (" .implode(',', $sub_category_arr).')';
 								} else {
+										$this->parent_id = $category->parent_id;
 										$condition = "cat_id = " . $cid;
 								}
                 $criteria->condition = $condition;

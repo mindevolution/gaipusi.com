@@ -27,6 +27,7 @@ class ArticleController extends MController
 						// 得到当前的分类和子分类
 						$this->category = CategoryHelper::getCategory($cid);
 						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 
             $criteria = new CDbCriteria();
             if($cid)

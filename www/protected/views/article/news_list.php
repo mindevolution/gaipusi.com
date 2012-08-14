@@ -1,7 +1,5 @@
 <?php
-$this->breadcrumbs = array(
-	'文章列表'
-);
+$this->breadcrumbs = $this->breadcrumb_data;
 ?>
  <div class="main">
     

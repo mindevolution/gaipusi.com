@@ -54,6 +54,25 @@ class CategoryHelper
 		return $data;
 	}
 
+	static public function isRootCategory($cid)
+	{
+		$category = Category::model()->findByPk($cid);
+		return !$category->parent_id;
+	}
+
+	static public function getBreadcrumb($cid)
+	{
+		$breadcrumb = array();
+		$category = Category::model()->findByPk($cid);
+		$breadcrumb[] = $category->name;
+		if(!self::isRootCategory($cid)) {
+			$category_parent = Category::model()->findByPk($category->parent_id);
+			array_unshift($breadcrumb, $category_parent->name);
+		}
+		
+		return $breadcrumb;
+	}
+
 }
 
 ?>

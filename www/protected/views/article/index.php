@@ -1,10 +1,7 @@
 <?php
 /* @var $this ArticleController */
 
-$this->breadcrumbs=array(
-	$article->title,
-   );
-
+$this->breadcrumbs= $this->breadcrumb_data;
 ?>
 
     <div class="main">

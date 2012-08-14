@@ -15,6 +15,8 @@ class ArticleController extends MController
 						$cid = $article->cat_id;
 						$this->category = CategoryHelper::getCategory($cid);
 						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
+						$this->breadcrumb_data[] = $article->title;
         
 		$this->render('index',array(
                     'article' => $article,

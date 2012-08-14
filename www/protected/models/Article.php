@@ -125,5 +125,16 @@ class Article extends CActiveRecord
                 return CHtml::listData($model, 'id', 'name');
         }
 	
+
+	/**
+	 * 更新文章点击量
+	 * @param type $id 
+	 */
+	static public function hitsPlus($id)
+	{
+		$ar = Article::model()->findByPk($id);
+		$ar->hits = $ar->hits + 1;
+		$ar->save();
+	}
 	
 }

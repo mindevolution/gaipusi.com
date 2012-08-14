@@ -1,8 +1,8 @@
 <div class="side">
     	<div class="nav-side">
-        	<h2><img src="img/bg-title-l.png" width="32" height="16" class="png" />新闻动态<img src="img/bg-title-r.png" width="32" height="16" class="png" /></h2>
+        	<h2><img src="img/bg-title-l.png" width="32" height="16" class="png" /><?php echo $this->category->name; ?><img src="img/bg-title-r.png" width="32" height="16" class="png" /></h2>
          <?php $this->widget('zii.widgets.CMenu',array(
-                                'items'=>$this->child,
+                                'items'=>$this->sub_category,
                                 
                         )); ?>
         </div>

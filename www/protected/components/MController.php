@@ -14,6 +14,8 @@ class MController extends Controller {
 
     public $navigation = array();
     public $child = array();
+		public $category;
+		public $sub_category;
    
     public function __construct($id, $module = null) 
     {

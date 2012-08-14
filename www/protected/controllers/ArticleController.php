@@ -6,13 +6,15 @@ class ArticleController extends MController
 	public function actionView($id)
 	{
             add_css('css/article.css');
-            $category = Category::model()->findByPK($id);
-           // $this->pageTitle() = $category->name.'-'.$this->pageTitle;
-            $article = Article::model()->findAll(array(
+            $article = Article::model()->find(array(
                 'condition' => 'id=:id',
                 'order' => 'id desc',
                 'params' => array(':id' => $id),
             ));
+						// 得到当前的分类和子分类
+						$cid = $article->cat_id;
+						$this->category = CategoryHelper::getCategory($cid);
+						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
         
 		$this->render('index',array(
                     'article' => $article,
@@ -21,6 +23,11 @@ class ArticleController extends MController
 	}
         public function actionList($cid = null) 
         {
+
+						// 得到当前的分类和子分类
+						$this->category = CategoryHelper::getCategory($cid);
+						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+
             $criteria = new CDbCriteria();
             if($cid)
             {

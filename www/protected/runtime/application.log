@@ -3772,3 +3772,174 @@ Stack trace:
 REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/3
 HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/1
 ---
+2012/08/14 15:35:40 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ().
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (47)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 15:35:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: SELECT COUNT(*) FROM `gp_article` `t` WHERE cat_id in ()' in /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(1535): CDbCommand->queryScalar()
+#2 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(47): CActiveRecord->count(Object(CDbCriteria))
+#3 [internal function]: ArticleController->actionList('13')
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#11 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/13
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 15:49:38 [error] [php] Trying to get property of non-object (/var/www/clients/gaipusi.com/www/protected/components/MController.php:70)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+in /var/www/clients/gaipusi.com/www/protected/components/MController.php (70)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 15:49:47 [error] [php] Trying to get property of non-object (/var/www/clients/gaipusi.com/www/protected/components/MController.php:70)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#2 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+in /var/www/clients/gaipusi.com/www/protected/components/MController.php (70)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 15:51:05 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "get".' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CComponent->__call('get', Array)
+#1 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CWebApplication->get()
+#2 /var/www/clients/gaipusi.com/www/protected/components/MController.php(69): CategoryHelper::getCategory()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(360): MController->__construct('article', NULL)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController('article/list/ci...')
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#6 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 15:51:10 [error] [exception.CException] exception 'CException' with message '属性 "CWebApplication.get" 未被定义.' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/base/CModule.php(106): CComponent->__get('get')
+#1 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CModule->__get('get')
+#2 /var/www/clients/gaipusi.com/www/protected/components/MController.php(69): CategoryHelper::getCategory()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(360): MController->__construct('article', NULL)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController('article/list/ci...')
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#6 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 15:51:15 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "get".' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CComponent->__call('get', Array)
+#1 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CWebApplication->get()
+#2 /var/www/clients/gaipusi.com/www/protected/components/MController.php(69): CategoryHelper::getCategory()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(360): MController->__construct('article', NULL)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController('article/list/ci...')
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#6 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 15:58:52 [error] [php] Undefined index: cid (/var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php:23)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#2 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#3 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+in /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php (23)
+in /var/www/clients/gaipusi.com/www/protected/components/MController.php (69)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 15:59:51 [error] [exception.CException] exception 'CException' with message 'CHttpRequest and its behaviors do not have a method or closure named "get".' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:266
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CComponent->__call('get', Array)
+#1 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(23): CHttpRequest->get('cid')
+#2 /var/www/clients/gaipusi.com/www/protected/components/MController.php(69): CategoryHelper::getCategory()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(360): MController->__construct('article', NULL)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(277): CWebApplication->createController('article/list/ci...')
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#6 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 16:04:38 [error] [php] Missing argument 1 for CategoryHelper::getCategory(), called in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php on line 26 and defined (/var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php:19)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): ArticleController->runAction()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): ArticleController->runActionWithFilters()
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): ArticleController->run()
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#7 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#8 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+in /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php (19)
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (26)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 16:04:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `gp_category` `t` WHERE parent_id = :p_id.
+in /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php (36)
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (27)
+in /var/www/clients/gaipusi.com/www/index.php (13)
+2012/08/14 16:04:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand 无法执行 SQL 语句: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT * FROM `gp_category` `t` WHERE parent_id = :p_id' in /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php:528
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(1286): CDbCommand->queryAll()
+#2 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(1405): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /var/www/clients/gaipusi.com/www/protected/components/CategoryHelper.php(36): CActiveRecord->findAll('parent_id = :p_...', Array)
+#4 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(27): CategoryHelper::getSubCategory('1')
+#5 [internal function]: ArticleController->actionList('1')
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#12 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#13 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#14 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 16:17:26 [error] [php] Trying to get property of non-object (/var/www/clients/gaipusi.com/www/protected/views/layouts/left.php:3)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CBaseController.php(96): ArticleController->renderInternal()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(785): ArticleController->renderFile()
+#2 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(20): ArticleController->render()
+#3 unknown(0): ArticleController->actionView()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs()
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): ArticleController->runAction()
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): ArticleController->runActionWithFilters()
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): ArticleController->run()
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#11 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#12 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/view/id/6
+in /var/www/clients/gaipusi.com/www/protected/views/layouts/left.php (3)
+in /var/www/clients/gaipusi.com/www/protected/views/layouts/article-list.php (23)
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (20)
+2012/08/14 16:18:19 [error] [php] Trying to get property of non-object (/var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php:18)
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams()
+#2 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): ArticleController->runAction()
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): ArticleController->runActionWithFilters()
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): ArticleController->run()
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController()
+#6 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#7 /var/www/clients/gaipusi.com/www/index.php(13): CWebApplication->run()
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/view/id/6
+in /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php (18)
+in /var/www/clients/gaipusi.com/www/index.php (13)

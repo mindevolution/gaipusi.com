@@ -64,11 +64,11 @@ class CategoryHelper
 	{
 		$breadcrumb = array();
 		$category = Category::model()->findByPk($cid);
-		$breadcrumb[] = $category->name;
 		if(!self::isRootCategory($cid)) {
 			$category_parent = Category::model()->findByPk($category->parent_id);
-			array_unshift($breadcrumb, $category_parent->name);
+			$breadcrumb[$category_parent->name] = url('article/list/cid/'.$category_parent->id);
 		}
+		$breadcrumb[$category->name] =  url('article/list/cid/'.$category->id);
 		
 		return $breadcrumb;
 	}

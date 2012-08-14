@@ -21,13 +21,14 @@ class ArticleController extends MController
 	}
         public function actionList($cid = null) 
         {
-            add_css('css/article-list.css');
             $criteria = new CDbCriteria();
             if($cid)
             {
 							  // 判断是否是根目录id，如果是根目录则搜索所有的该下面的文章
                 $cid = (int) $cid;
 								$category = Category::model()->findByPk($cid);
+								// Add css by category
+								CssHelper::addListCss($category);
 								if(! $category->parent_id) {// 如果parent_id为空或者是null，则是根目录
 								    $sub_category_arr = array();
 								    // 搜索所有的子目录
@@ -49,7 +50,8 @@ class ArticleController extends MController
             $pager->applyLimit($criteria);
             $articles = Article::model()->findAll($criteria);
     
-            $this->render('list',array(
+						$view_file = strtolower(str_replace(' ', '_', $category->list_layout));
+            $this->render($view_file,array(
                 'articles'=>$articles,
                 'pages'=>$pager,
             ));

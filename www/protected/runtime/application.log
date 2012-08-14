@@ -3618,3 +3618,157 @@ Stack trace:
 REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/13
 HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/16
 ---
+2012/08/14 12:03:29 [error] [exception.CException] exception 'CException' with message '属性 "Category.layout_list" 未被定义.' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('layout_list')
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(31): CActiveRecord->__get('layout_list')
+#2 [internal function]: ArticleController->actionList('8')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 12:04:41 [error] [exception.CException] exception 'CException' with message 'ArticleController 无法找到请求的视图 "Camp List".' in /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php:879
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('Camp List', Array, true)
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(55): CController->render('Camp List', Array)
+#2 [internal function]: ArticleController->actionList('8')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 12:05:47 [error] [exception.CException] exception 'CException' with message 'ArticleController 无法找到请求的视图 "camp_list".' in /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php:879
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('camp_list', Array, true)
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(56): CController->render('camp_list', Array)
+#2 [internal function]: ArticleController->actionList('8')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 14:12:00 [error] [exception.CException] exception 'CException' with message 'ArticleController 无法找到请求的视图 "camp_list".' in /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php:879
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('camp_list', Array, true)
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(56): CController->render('camp_list', Array)
+#2 [internal function]: ArticleController->actionList('8')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 14:17:21 [error] [exception.CException] exception 'CException' with message '属性 "Article.description" 未被定义.' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('description')
+#1 /var/www/clients/gaipusi.com/www/protected/views/article/camp_list.php(16): CActiveRecord->__get('description')
+#2 /var/www/clients/gaipusi.com/www/yii/framework/web/CBaseController.php(127): require('/var/www/client...')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/client...', Array, true)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/client...', Array, true)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('camp_list', Array, true)
+#6 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(56): CController->render('camp_list', Array)
+#7 [internal function]: ArticleController->actionList('8')
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#14 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#15 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 14:17:28 [error] [exception.CException] exception 'CException' with message '属性 "Article.description" 未被定义.' in /var/www/clients/gaipusi.com/www/yii/framework/base/CComponent.php:131
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/db/ar/CActiveRecord.php(144): CComponent->__get('description')
+#1 /var/www/clients/gaipusi.com/www/protected/views/article/camp_list.php(16): CActiveRecord->__get('description')
+#2 /var/www/clients/gaipusi.com/www/yii/framework/web/CBaseController.php(127): require('/var/www/client...')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/client...', Array, true)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(870): CBaseController->renderFile('/var/www/client...', Array, true)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('camp_list', Array, true)
+#6 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(56): CController->render('camp_list', Array)
+#7 [internal function]: ArticleController->actionList('8')
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#10 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#14 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#15 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/8
+---
+2012/08/14 14:21:28 [error] [exception.CException] exception 'CException' with message 'ArticleController 无法找到请求的视图 "news_list".' in /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php:879
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('news_list', Array, true)
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(57): CController->render('news_list', Array)
+#2 [internal function]: ArticleController->actionList('3')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/3
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---
+2012/08/14 14:21:36 [error] [exception.CException] exception 'CException' with message 'ArticleController 无法找到请求的视图 "news_list".' in /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php:879
+Stack trace:
+#0 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(783): CController->renderPartial('news_list', Array, true)
+#1 /var/www/clients/gaipusi.com/www/protected/controllers/ArticleController.php(57): CController->render('news_list', Array)
+#2 [internal function]: ArticleController->actionList('3')
+#3 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CAction.php(107): ReflectionMethod->invokeArgs(Object(ArticleController), Array)
+#4 /var/www/clients/gaipusi.com/www/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(ArticleController), Object(ReflectionMethod), Array)
+#5 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#6 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#7 /var/www/clients/gaipusi.com/www/yii/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(283): CController->run('list')
+#9 /var/www/clients/gaipusi.com/www/yii/framework/web/CWebApplication.php(142): CWebApplication->runController('article/list/ci...')
+#10 /var/www/clients/gaipusi.com/www/yii/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#11 /var/www/clients/gaipusi.com/www/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/clients/gaipusi.com/www/index.php?r=article/list/cid/3
+HTTP_REFERER=http://localhost/clients/gaipusi.com/www/index.php?r=article/list/cid/1
+---

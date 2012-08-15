@@ -3,8 +3,9 @@
 
 /* 内容开始 */
 .article-list li { padding:20px 0px; border-bottom:1px solid #e3e3e3;}
+.article-list .list-img { display: block; margin-right: 10px; float:left;}
 .article-list li img { float:left;}
-.article { float:right; width:632px;}
+.article { float:left; width:632px;}
 .article h2 { font-size:14px; font-weight:bold; line-height:20px; margin-bottom:10px;}
 .article h2 a { display:block; color:#333;}
 .article h2 a:hover { color:#ab304d;}

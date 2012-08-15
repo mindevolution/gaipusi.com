@@ -438,4 +438,43 @@ class Image {
 		return TRUE;
 	}
 
+	public function smart_resize($width, $height)
+	{
+			if ( ! $this->valid_size('width', $width))
+					throw new CException('image invalid width');
+
+			if ( ! $this->valid_size('height', $height))
+					throw new CException('image invalid height');
+
+			if (empty($width) AND empty($height))
+					throw new CException('image invalid dimensions');
+
+			if ($this->image["width"]/$this->image["height"] > $width/$height) {
+					$this->actions['resize'] = array
+					(
+							'width'  => $width,
+							'height' => $height,
+							'master' => Image::HEIGHT,
+					);
+			}
+			else {
+					$this->actions['resize'] = array
+					(
+							'width'  => $width,
+							'height' => $height,
+							'master' => Image::WIDTH,
+					);
+			}
+
+			$this->actions['crop'] = array
+			(
+					'width'  => $width,
+					'height' => $height,
+					'top'    => 'center',
+					'left'   => 'center',
+			);
+
+			return $this;
+	}
+
 } // End Image

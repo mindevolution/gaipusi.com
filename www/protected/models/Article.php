@@ -136,5 +136,19 @@ class Article extends CActiveRecord
 		$ar->hits = $ar->hits + 1;
 		$ar->save();
 	}
+
+	static public function getNextArticle($article)
+	{
+		$modelPrecedent = Article::model()->findBySql("Select * from ".Article::tableName()." where id > ".$article->id." 
+			AND cat_id = ".$article->cat_id." Order By id ASC");
+		return $modelPrecedent;
+	}
+
+	static public function getPreArticle($article)
+	{
+		$model = Article::model()->findBySql("Select * from ".Article::tableName()." where id < ".$article->id." 
+			AND cat_id = ".$article->cat_id." Order By id DESC");
+		return $model;
+	}
 	
 }

@@ -19,10 +19,22 @@ class ArticleController extends MController
 						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 						$this->breadcrumb_data[] = $article->title;
+
+						$nextLink = '';
+						$preLink = '';
+						$preArticle = Article::getPreArticle($article);
+						$pagePreNextArray = array();
+						if($preArticle) {
+							$pagePreNextArray[] = '上一篇:'.l($preArticle->title, 'article/view/id/'.$preArticle->id);
+						}
+						$nextArticle = Article::getNextArticle($article);
+						if($nextArticle) {
+							$pagePreNextArray[] = '下一篇:'.l($nextArticle->title, 'article/view/id/'.$nextArticle->id);
+						}
         
 		$this->render('index',array(
                     'article' => $article,
-                  
+										'pagePreNext' => $pagePreNextArray,
                 ));
 	}
         public function actionList($cid = null) 

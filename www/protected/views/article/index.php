@@ -12,8 +12,9 @@ $this->breadcrumbs= $this->breadcrumb_data;
             <p><?php echo $article->body;?><p> 
         </div>
         <ul class="xiangguan">
-        	<li>上一篇:<a href="" target="_blank"> 热烈庆祝09年圣诞晚会圆满成功</a></li>
-            <li>下一篇:<a href="" target="_blank"> 热烈庆祝09年圣诞晚会圆满成功</a></li>
+					<?php foreach ($pagePreNext as $v): ?>
+        	<li><?php echo $v; ?></li>
+					<?php endforeach; ?>
         </ul>
         <div class="clear"></div>
         <div class="liuyan">
@@ -29,3 +30,8 @@ $this->breadcrumbs= $this->breadcrumb_data;
             <div class="clear"></div>.
         </div>
     </div>
+
+	<?php
+		$this->widget('application.components.CContactForm', array(
+		));
+	?>

@@ -1,4 +1,4 @@
-?1. 打开git命令行
+1. 打开git命令行
 2. 改变当前目录到工作目录
 	cd gaipusi.com/gaipusi.com
 3. 更新本地程序到最新版本
@@ -11,3 +11,7 @@
 6. 上传本地代码
 	git pull
 	git push origin master
+
+
+
+git clone https://github.com/username/Spoon-Knife.git

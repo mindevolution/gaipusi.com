@@ -17,6 +17,8 @@
  */
 class Apply extends CActiveRecord
 {
+        public $verifyCode; 
+        
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
@@ -54,6 +56,7 @@ class Apply extends CActiveRecord
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, gender, Phone, email, address, age, class, level, school', 'safe', 'on'=>'search'),
+                        array('verifyCode', 'captcha', 'allowEmpty'=>!Yii::app()->user->isGuest),
 		);
 	}
 
@@ -84,6 +87,7 @@ class Apply extends CActiveRecord
 			'class' => '班级',
 			'level' => '自我评价',
 			'school' => '学校',
+                    'verifyCode' => '验证码',
 		);
 	}
 

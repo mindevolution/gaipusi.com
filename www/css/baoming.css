@@ -7,16 +7,16 @@
 .baoming  h2 span {font-size:12px; font-weight:normal; color:#666; padding-left:10px;}
 fieldset { border:none; margin-bottom:25px;}
 fieldset li { float:left; width:233px; padding:10px 10px 0px;}
-fieldset li p{ color:#333; line-height:22px;}
-fieldset li p sup { color:red;}
+fieldset li label{ color:#333; line-height:22px;}
+fieldset li label span { color:red;}
 fieldset li input { width:231px; height:24px; border:1px solid #ccc;}
 #address { width:484px;}
 #level { width:739px; height:100px;}
 #school { width:739px;}
 li.nofloat { float:none; clear:both;}
 
-.yanzhengma li { float:none; width:auto; height:26px; line-height:26px;}
-.yanzhengma li p { float:left; padding-right:10px; padding-top:5px;}
+.yanzhengma li { float:none; width:auto; height:85px; line-height:26px;}
+.yanzhengma li label { float:left; padding-right:10px; padding-top:5px;}
 .yanzhengma li input { width:83px;}
 .yanzhengma li img { padding:0px 10px;}
 .yanzhengma li a { color:#1b7cd7; text-decoration:underline;}

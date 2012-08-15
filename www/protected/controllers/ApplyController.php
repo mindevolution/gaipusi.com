@@ -1,12 +1,12 @@
 <?php
 
-class ArticleController extends Controller
+class ApplyController extends MController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/article-list';
 
 	/**
 	 * @return array action filters
@@ -28,17 +28,21 @@ class ArticleController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','dynamicArticle'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('*'),
 			),
+                        array('allow',
+                                'actions'=>array('captcha'),
+                                'users'=>array('*'),
+                        ),
 			array('deny',  // deny all users
 				'users'=>array('*'),
 			),
@@ -62,20 +66,18 @@ class ArticleController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Article;
+                add_css('css/baoming.css');
+		$model=new Apply;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Article']))
+		if(isset($_POST['Apply']))
 		{
-			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
+			$model->attributes=$_POST['Apply'];
 			if($model->save())
-			{
-                            $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-			}
-				$this->redirect(array('view','id'=>$model->id));
+                          // echo '<script>alert("OK")</script>';
+				$this->redirect('create');
 		}
 
 		$this->render('create',array(
@@ -95,14 +97,9 @@ class ArticleController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Article']))
+		if(isset($_POST['Apply']))
 		{
-			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
-			
-			 if (is_object($model->pic)) {
-                                 $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-                         }
+			$model->attributes=$_POST['Apply'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -131,7 +128,7 @@ class ArticleController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Article');
+		$dataProvider=new CActiveDataProvider('Apply');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -142,10 +139,10 @@ class ArticleController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Article('search');
+		$model=new Apply('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Article']))
-			$model->attributes=$_GET['Article'];
+		if(isset($_GET['Apply']))
+			$model->attributes=$_GET['Apply'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -159,11 +156,33 @@ class ArticleController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Article::model()->findByPk($id);
+		$model=Apply::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
 	}
+        
+        
+        public function actions()
+        {
+            return array(
+                'captcha'=>array(
+                'class'=>'CCaptchaAction',
+                'width'=>140,//默认120
+                'height'=>70,//默认50
+                'padding'=>2,
+                'backColor'=>0xFFFFFF,  //背景颜色
+                'foreColor'=>0x2040A0, //字体颜色
+                'minLength'=>6,  //设置最短为6位
+                'maxLength'=>7,   //设置最长为7位,生成的code在6-7直接rand了
+                'transparent'=>true,  //显示为透明,默认中可以看到为false
+                ),
+                  'page'=>array(
+                'class'=>'CViewAction',
+            ),
+            );
+            
+        }
 
 	/**
 	 * Performs the AJAX validation.
@@ -171,20 +190,12 @@ class ArticleController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='article-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='apply-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
-	
-	 public function actionDynamicArticle($parent_id) 
-        {
-                $model = Article::model()->getArtList($parent_id);
-			foreach($model as $value=>$name)
-			{
-				echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
-			}
-        }
-	
+        
+        
 }

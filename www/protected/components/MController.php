@@ -25,7 +25,6 @@ class MController extends Controller {
                 Yii::app()->setLanguage($lang_new);
                 $criteria->condition = 'parent_id=0 AND lang = "'.$lang_new.'"';
                 $category = Category::model()->findAll($criteria);
-                
               
 //                var_dump($category);
                 $nav_array = array();

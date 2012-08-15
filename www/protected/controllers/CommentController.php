@@ -1,12 +1,12 @@
 <?php
 
-class ArticleController extends Controller
+class CommentController extends MController
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/article-list';
 
 	/**
 	 * @return array action filters
@@ -28,16 +28,16 @@ class ArticleController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','dynamicArticle'),
+				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
-				'users'=>array('@'),
+				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('*'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -62,19 +62,16 @@ class ArticleController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Article;
+            add_css('css/article.css');
+		$model=new Comment;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Article']))
+		if(isset($_POST['Comment']))
 		{
-			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
+			$model->attributes=$_POST['Comment'];
 			if($model->save())
-			{
-                            $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-			}
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -95,14 +92,9 @@ class ArticleController extends Controller
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['Article']))
+		if(isset($_POST['Comment']))
 		{
-			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
-			
-			 if (is_object($model->pic)) {
-                                 $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-                         }
+			$model->attributes=$_POST['Comment'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}
@@ -131,7 +123,7 @@ class ArticleController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Article');
+		$dataProvider=new CActiveDataProvider('Comment');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -142,10 +134,10 @@ class ArticleController extends Controller
 	 */
 	public function actionAdmin()
 	{
-		$model=new Article('search');
+		$model=new Comment('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['Article']))
-			$model->attributes=$_GET['Article'];
+		if(isset($_GET['Comment']))
+			$model->attributes=$_GET['Comment'];
 
 		$this->render('admin',array(
 			'model'=>$model,
@@ -159,7 +151,7 @@ class ArticleController extends Controller
 	 */
 	public function loadModel($id)
 	{
-		$model=Article::model()->findByPk($id);
+		$model=Comment::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -171,20 +163,10 @@ class ArticleController extends Controller
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='article-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='comment-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
 	}
-	
-	 public function actionDynamicArticle($parent_id) 
-        {
-                $model = Article::model()->getArtList($parent_id);
-			foreach($model as $value=>$name)
-			{
-				echo CHtml::tag('option',array('value'=>$value),CHtml::encode($name),true);
-			}
-        }
-	
 }

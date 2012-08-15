@@ -2186,3 +2186,103 @@ Stack trace:
 #14 {main}
 REQUEST_URI=/gaipusi.com/www/admin.php
 ---
+2012/08/14 01:32:19 [error] [exception.CException] exception 'CException' with message 'ApplyController cannot find the requested view "index".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 D:\wamp\www\gaipusi\www\protected\admin\controllers\ApplyController.php(130): CController->render('index', Array)
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply')
+#13 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=apply
+---
+2012/08/14 01:32:28 [error] [exception.CException] exception 'CException' with message 'ApplyController cannot find the requested view "index".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 D:\wamp\www\gaipusi\www\protected\admin\controllers\ApplyController.php(130): CController->render('index', Array)
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Apply')
+#13 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=Apply
+---
+2012/08/14 01:33:05 [error] [exception.CException] exception 'CException' with message 'ApplyController cannot find the requested view "index".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 D:\wamp\www\gaipusi\www\protected\admin\controllers\ApplyController.php(130): CController->render('index', Array)
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply')
+#13 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=apply
+---
+2012/08/14 06:34:48 [error] [exception.CException] exception 'CException' with message 'ApplyController cannot find the requested view "index".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 D:\wamp\www\gaipusi\www\protected\admin\controllers\ApplyController.php(130): CController->render('index', Array)
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply')
+#13 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=apply
+---
+2012/08/14 09:09:56 [error] [exception.CException] exception 'CException' with message 'ApplyController cannot find the requested view "index".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:879
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('index', Array, true)
+#1 D:\wamp\www\gaipusi\www\protected\admin\controllers\ApplyController.php(130): CController->render('index', Array)
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply')
+#13 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=apply
+---

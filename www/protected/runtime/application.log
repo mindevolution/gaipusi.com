@@ -3510,3 +3510,371 @@ Stack trace:
 REQUEST_URI=/gaipusi/www/index.php?r=site/index&lang=en_us
 in D:\wamp\www\gaipusi\www\protected\components\MController.php (64)
 in D:\wamp\www\gaipusi\www\index.php (13)
+2012/08/14 01:35:12 [error] [exception.CException] exception 'CException' with message 'Property "ApplyController.navigation" is not defined.' in D:\wamp\www\gaipusi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\views\layouts\header.php(8): CComponent->__get('navigation')
+#1 D:\wamp\www\gaipusi\www\protected\views\layouts\main.php(20): include('D:\wamp\www\gai...')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 D:\wamp\www\gaipusi\www\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#13 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(128): CController->render('index', Array)
+#14 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionIndex()
+#15 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#24 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply')
+#25 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=gii/crud
+---
+2012/08/14 02:29:32 [error] [exception.CException] exception 'CException' with message 'ApplyController contains improperly nested widget tags in its view "D:\wamp\www\gaipusi\www\protected\views\apply\create.php". A CActiveForm widget does not have an endWidget() call.' in D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php:102
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(870): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#2 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(80): CController->render('create', Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ApplyController->actionCreate()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/create')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 02:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/captcha')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/captcha&v=5029beafb9877
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 03:00:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/captcha')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/captcha&v=5029bf680b761
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 03:01:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/captcha')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/captcha&refresh=1&_=1344913266054
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 03:01:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/captcha')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/captcha&refresh=1&_=1344913267141
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 03:01:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('captcha')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('captcha')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/captcha')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/captcha&refresh=1&_=1344913268042
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 07:17:26 [error] [php] Missing argument 1 for CController::redirect(), called in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php on line 80 and defined (D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:1024)
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): ApplyController->runAction()
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): ApplyController->filterAccessControl()
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): ApplyController->runActionWithFilters()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): ApplyController->run()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/gaipusi/www/index.php?r=apply/create
+in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php (80)
+in D:\wamp\www\gaipusi\www\index.php (13)
+2012/08/14 07:18:09 [error] [php] Missing argument 1 for CController::redirect(), called in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php on line 80 and defined (D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:1024)
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): ApplyController->runAction()
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): ApplyController->filterAccessControl()
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): ApplyController->runActionWithFilters()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): ApplyController->run()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/gaipusi/www/index.php?r=apply/create
+in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php (80)
+in D:\wamp\www\gaipusi\www\index.php (13)
+2012/08/14 07:22:14 [error] [php] Missing argument 1 for CController::redirect(), called in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php on line 80 and defined (D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:1024)
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): ApplyController->runAction()
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): ApplyController->filterAccessControl()
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): ApplyController->runActionWithFilters()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): ApplyController->run()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/gaipusi/www/index.php?r=apply/create
+in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php (80)
+in D:\wamp\www\gaipusi\www\index.php (13)
+2012/08/14 07:23:42 [error] [php] Missing argument 1 for CController::redirect(), called in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php on line 80 and defined (D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:1024)
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): ApplyController->runAction()
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): ApplyController->filterAccessControl()
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): ApplyController->runActionWithFilters()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): ApplyController->run()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\index.php(13): CWebApplication->run()
+REQUEST_URI=/gaipusi/www/index.php?r=apply/create
+in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php (80)
+in D:\wamp\www\gaipusi\www\index.php (13)
+2012/08/14 07:29:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php:161
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(59): ApplyController->loadModel('')
+#1 [internal function]: ApplyController->actionView('')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ApplyController), Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ApplyController), Object(ReflectionMethod), Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/view')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/view&id=
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 07:29:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php:161
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(59): ApplyController->loadModel('')
+#1 [internal function]: ApplyController->actionView('')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ApplyController), Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ApplyController), Object(ReflectionMethod), Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/view')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/view&id=
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 07:32:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php:161
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(59): ApplyController->loadModel('')
+#1 [internal function]: ApplyController->actionView('')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ApplyController), Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ApplyController), Object(ReflectionMethod), Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/view')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/view&id=
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 07:36:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php:161
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(59): ApplyController->loadModel('')
+#1 [internal function]: ApplyController->actionView('')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ApplyController), Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ApplyController), Object(ReflectionMethod), Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/view')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/view&id=
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 07:36:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php:161
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php(59): ApplyController->loadModel('')
+#1 [internal function]: ApplyController->actionView('')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(ApplyController), Array)
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(ApplyController), Object(ReflectionMethod), Array)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('apply/view')
+#14 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=apply/view&id=
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=apply/create
+---
+2012/08/14 08:28:46 [error] [exception.CException] exception 'CException' with message 'Property "CommentController.navigation" is not defined.' in D:\wamp\www\gaipusi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\views\layouts\header.php(8): CComponent->__get('navigation')
+#1 D:\wamp\www\gaipusi\www\protected\views\layouts\main.php(20): include('D:\wamp\www\gai...')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div id="conten...')
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div id="conten...')
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 D:\wamp\www\gaipusi\www\protected\views\layouts\column1.php(6): CBaseController->endContent()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#13 D:\wamp\www\gaipusi\www\protected\controllers\CommentController.php(7): CController->render('index')
+#14 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): CommentController->actionIndex()
+#15 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#19 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Comment')
+#20 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=Comment
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=gii/controller
+---
+2012/08/14 08:29:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('create')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Comment/create')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=Comment/create
+---
+2012/08/14 08:30:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create".' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:484
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(271): CController->missingAction('create')
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('create')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('Comment/create')
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=Comment/create
+---
+2012/08/14 08:32:03 [error] [exception.CException] exception 'CException' with message 'Property "CommentController.navigation" is not defined.' in D:\wamp\www\gaipusi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\protected\views\layouts\header.php(8): CComponent->__get('navigation')
+#1 D:\wamp\www\gaipusi\www\protected\views\layouts\main.php(20): include('D:\wamp\www\gai...')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 D:\wamp\www\gaipusi\www\protected\views\layouts\column2.php(22): CBaseController->endContent()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#13 D:\wamp\www\gaipusi\www\protected\controllers\CommentController.php(128): CController->render('index', Array)
+#14 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): CommentController->actionIndex()
+#15 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#22 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('')
+#24 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('comment')
+#25 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=comment
+HTTP_REFERER=http://localhost/gaipusi/www/index.php?r=gii/crud
+---

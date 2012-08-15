@@ -6,36 +6,78 @@ class ArticleController extends MController
 	public function actionView($id)
 	{
             add_css('css/article.css');
-            $category = Category::model()->findByPK($id);
-           // $this->pageTitle() = $category->name.'-'.$this->pageTitle;
-            $article = Article::model()->findAll(array(
+						Article::hitsPlus($id);
+            $article = Article::model()->find(array(
                 'condition' => 'id=:id',
                 'order' => 'id desc',
                 'params' => array(':id' => $id),
             ));
+						// 得到当前的分类和子分类
+						$cid = $article->cat_id;
+						$this->parent_id = $article->cat_id;
+						$this->category = CategoryHelper::getCategory($cid);
+						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
+						$this->breadcrumb_data[] = $article->title;
+
+						$nextLink = '';
+						$preLink = '';
+						$preArticle = Article::getPreArticle($article);
+						$pagePreNextArray = array();
+						if($preArticle) {
+							$pagePreNextArray[] = '上一篇:'.l($preArticle->title, 'article/view/id/'.$preArticle->id);
+						}
+						$nextArticle = Article::getNextArticle($article);
+						if($nextArticle) {
+							$pagePreNextArray[] = '下一篇:'.l($nextArticle->title, 'article/view/id/'.$nextArticle->id);
+						}
         
 		$this->render('index',array(
                     'article' => $article,
-                  
+										'pagePreNext' => $pagePreNextArray,
                 ));
 	}
         public function actionList($cid = null) 
         {
-            add_css('css/article-list.css');
+
+						// 得到当前的分类和子分类
+						$this->category = CategoryHelper::getCategory($cid);
+						$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+						$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
+
             $criteria = new CDbCriteria();
             if($cid)
             {
+							  // 判断是否是根目录id，如果是根目录则搜索所有的该下面的文章
                 $cid = (int) $cid;
-                $criteria->condition = "cat_id = " . $cid;
+								$category = Category::model()->findByPk($cid);
+								// Add css by category
+								CssHelper::addListCss($category);
+								if(! $category->parent_id) {// 如果parent_id为空或者是null，则是根目录
+										$this->parent_id = $category->id;
+								    $sub_category_arr = array();
+								    // 搜索所有的子目录
+										$sub_categories = Category::model()->findAll('parent_id=:p_id',
+											array(':p_id' => $cid));
+										foreach($sub_categories as $val) {
+											   $sub_category_arr[] = $val->id;
+										}
+										$condition = "cat_id in (" .implode(',', $sub_category_arr).')';
+								} else {
+										$this->parent_id = $category->parent_id;
+										$condition = "cat_id = " . $cid;
+								}
+                $criteria->condition = $condition;
             }
             $criteria->order = 'id desc';
             $count = Article::model()->count($criteria);
             $pager = new CPagination($count);
-            $pager->pageSize = 6;
+            $pager->pageSize = 3;
             $pager->applyLimit($criteria);
             $articles = Article::model()->findAll($criteria);
     
-            $this->render('list',array(
+						$view_file = strtolower(str_replace(' ', '_', $category->list_layout));
+            $this->render($view_file,array(
                 'articles'=>$articles,
                 'pages'=>$pager,
             ));

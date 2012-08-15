@@ -25,5 +25,9 @@
 	<?php echo CHtml::encode($data->lang); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('list_layout')); ?>:</b>
+	<?php echo CHtml::encode($data->list_layout); ?>
+	<br />
+
 
 </div>

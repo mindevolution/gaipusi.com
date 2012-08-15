@@ -48,6 +48,18 @@
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'list_layout'); ?>
+		<?php
+		?>
+		<?php echo $form->dropDownList($model,'list_layout',ZHtml::enumItem($model, 'list_layout'),array(
+                    'options'=>array(
+                        'empty' => array('selected'=>true),
+                    )
+                )); ?>
+		<?php echo $form->error($model,'list_layout'); ?>
+	</div>
+
 <div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>

@@ -30,7 +30,7 @@
                                                 'tagName' => 'span',
                                         ));
                                         ?><!-- breadcrumbs --></li>
-                 <li class="path-r"><a href="#" target="_self">返回上级</a></li>
+                 <li class="path-r"><a href="<?php echo url('article/list/cid/'.$this->parent_id); ?>" target="_self">返回上级</a></li>
             </ul>
          </div>
        <?php endif ?>

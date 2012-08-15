@@ -1,7 +1,11 @@
 <?php
+<<<<<<< HEAD
 $this->breadcrumbs = array(
 	'文章列表'
 );
+=======
+$this->breadcrumbs = $this->breadcrumb_data;
+>>>>>>> fbacca4f68a0bbba83a869759a26610c9322ab9d
 ?>
     <div class="main">
         <div class="yinghui-block">

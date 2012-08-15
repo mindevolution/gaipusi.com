@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>产看分类</h1>
+<h1>查看分类</h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -26,5 +26,6 @@ $this->menu=array(
 		'guid',
 		'name',
 		'lang',
+		'list_layout',
 	),
 )); ?>

@@ -1,24 +1,20 @@
-<?php foreach($article as $row):?>
 <?php
 /* @var $this ArticleController */
 
-$this->breadcrumbs=array(
-	$row->title,
-   );
-
+$this->breadcrumbs= $this->breadcrumb_data;
 ?>
 
     <div class="main">
         
         <div class="article">
-        	<h1><?php echo $row->title;?></h1>
-            <h6>作者：<span class="writer"><?php echo $row->author;?></span>&nbsp;&nbsp;浏览次数：<span class="number"><?php echo $row->hits;?></span>&nbsp;&nbsp;发布日期：<span class="day"><?php echo $row->datetime;?></span> </h6>
-            <p><?php echo $row->body;?><p> 
+        	<h1><?php echo $article->title;?></h1>
+            <h6>作者：<span class="writer"><?php echo $article->author;?></span>&nbsp;&nbsp;浏览次数：<span class="number"><?php echo $article->hits;?></span>&nbsp;&nbsp;发布日期：<span class="day"><?php echo $article->datetime;?></span> </h6>
+            <p><?php echo $article->body;?><p> 
         </div>
-     <?php endforeach;?>
         <ul class="xiangguan">
-        	<li>上一篇:<a href="" target="_blank"> 热烈庆祝09年圣诞晚会圆满成功</a></li>
-            <li>下一篇:<a href="" target="_blank"> 热烈庆祝09年圣诞晚会圆满成功</a></li>
+					<?php foreach ($pagePreNext as $v): ?>
+        	<li><?php echo $v; ?></li>
+					<?php endforeach; ?>
         </ul>
         <div class="clear"></div>
         <div class="liuyan">
@@ -34,3 +30,8 @@ $this->breadcrumbs=array(
             <div class="clear"></div>.
         </div>
     </div>
+
+	<?php
+		$this->widget('application.components.CContactForm', array(
+		));
+	?>

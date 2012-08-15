@@ -1,6 +1,6 @@
 <div id="page_header">
 	<div id="logo">
-		<img class="png" src="img/logo.png" width="468" height="74" alt="" />
+		<a href="<?php echo bu(); ?>"><img class="png" src="img/logo.png" width="468" height="74" alt="" /></a>
 	</div>
 
 	<div class="nav png">

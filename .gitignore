@@ -1,3 +1,10 @@
 assets/
 protected/runtime/
+protected/config/main.php
 themes/classic/views/
+
+www/assets/
+www/protected/runtime/
+www/protected/config/main.php
+www/themes/classic/views/
+www/images/

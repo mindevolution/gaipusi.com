@@ -52,7 +52,7 @@ $('.search-form form').submit(function(){
 		array(
 			'class'=>'CButtonColumn',
 			'header'=>'操作',
-			'template'=>'{view}{delete}',
+			'template'=>'{delete}',
 		),
 	),
 	));

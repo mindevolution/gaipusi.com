@@ -69,11 +69,7 @@ class ArticleController extends BController
 		if(isset($_POST['Article']))
 		{
 			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
 			if($model->save())
-			{
-                            $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-			}
 				$this->redirect(array('view','id'=>$model->id));
 		}
 
@@ -97,11 +93,6 @@ class ArticleController extends BController
 		if(isset($_POST['Article']))
 		{
 			$model->attributes=$_POST['Article'];
-                        $model->pic=CUploadedFile::getInstance($model,'pic');
-			
-			 if (is_object($model->pic)) {
-                                 $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-                         }
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->id));
 		}

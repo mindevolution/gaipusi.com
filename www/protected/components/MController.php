@@ -27,7 +27,18 @@ class MController extends Controller {
         
                 $criteria = new CDbCriteria();
                 $criteria->select = 'id,parent_id,name,lang';
-                $lang_new =  isset($_GET['lang']) ? $_GET['lang'] : Yii::app()->language; 
+
+								$session = Yii::app()->session;  
+								// 初始化语言
+								if(!isset($session['lang'])) {
+									$session['lang'] = Yii::app()->getLanguage();
+								}
+
+								// 重新设置语言
+								if(Yii::app()->request->getParam('lang')) {
+									$session['lang'] = Yii::app()->request->getParam('lang');
+								}
+								$lang_new = $session['lang'];
                 Yii::app()->setLanguage($lang_new);
                 $criteria->condition = 'parent_id=0 AND lang = "'.$lang_new.'"';
                 $category = Category::model()->findAll($criteria);

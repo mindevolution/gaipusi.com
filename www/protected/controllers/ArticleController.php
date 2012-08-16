@@ -21,7 +21,6 @@ class ArticleController extends MController
 		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 		$this->breadcrumb_data[] = $article->title;
-<<<<<<< HEAD
 
 		$preArticle = Article::getPreArticle($article);
 		$pagePreNextArray = array();
@@ -34,55 +33,35 @@ class ArticleController extends MController
 		{
 			$pagePreNextArray[] = '下一篇:' . l($nextArticle->title, 'article/view/id/' . $nextArticle->id);
 		}
+                //招生信息
+                $criteriaRe = new CDbCriteria();
+                $criteriaRe ->condition = 'cat_id = 4';
+                $criteriaRe ->order = 'id desc';
+                $criteriaRe ->limit = '3';
+                $this->recuitments = Article::model()->findAll($criteriaRe);
+                
+                 //招聘信息
+                $criteriaZh = new CDbCriteria();
+                $criteriaZh ->condition = 'maincat_id = 13';
+                $criteriaZh ->order = 'id desc';
+                $criteriaZh ->limit = '3';
+                $this->invites = Article::model()->findAll($criteriaZh);
+                
+                 //联系我们
+                $criteriaCon = new CDbCriteria();
+                $criteriaCon ->order = 'id desc';
+                $this->connect = Connect::model()->findAll($criteriaCon);
                 
                 
-                  // 招生信息
-                $creteriaRe = new CDbCriteria();
-                $creteriaRe->condition = 'cat_id = 4';
-                $creteriaRe->order = 'id desc';
-                $creteriaRe->limit = '3';
-                $this->recuitments = Article::model()->findAll($creteriaRe);
-               
-                //公司招聘
-                 $creteriaZh = new CDbCriteria();
-                $creteriaZh->condition = 'maincat_id = 13';
-                $creteriaZh->order = 'id desc';
-                $creteriaZh->limit = '3';
-                $this->invites = Article::model()->findAll($creteriaZh);
-                
-                  //联系我们
-                 $creteriaCon = new CDbCriteria();
-                $creteriaCon->order = 'id desc';
-                $this->connect = Connect::model()->findAll($creteriaCon);
-                
-		$this->render('index', array(
-			'article' => $article,
-			'pagePreNext' => $pagePreNextArray,
-                        
-=======
-
-		$preArticle = Article::getPreArticle($article);
-		$pagePreNextArray = array();
-		if ($preArticle)
-		{
-			$pagePreNextArray[] = '上一篇:' . l($preArticle->title, 'article/view/id/' . $preArticle->id);
-		}
-		$nextArticle = Article::getNextArticle($article);
-		if ($nextArticle)
-		{
-			$pagePreNextArray[] = '下一篇:' . l($nextArticle->title, 'article/view/id/' . $nextArticle->id);
-		}
 
 		$this->render('index', array(
 			'article' => $article,
 			'pagePreNext' => $pagePreNextArray,
->>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		));
 	}
 
 	public function actionList($cid = null)
 	{
-<<<<<<< HEAD
 
 		// 得到当前的分类和子分类
 		$this->category = CategoryHelper::getCategory($cid);
@@ -93,18 +72,6 @@ class ArticleController extends MController
 		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 
-=======
-
-		// 得到当前的分类和子分类
-		$this->category = CategoryHelper::getCategory($cid);
-		if($this->category->list_layout == 'Staff List')
-		{
-			redirect('teacher/list/cid/'.$cid);
-		}
-		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
-		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
-
->>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		$criteria = new CDbCriteria();
 		if ($cid)
 		{
@@ -137,34 +104,27 @@ class ArticleController extends MController
 		$pager->pageSize = 3;
 		$pager->applyLimit($criteria);
 		$articles = Article::model()->findAll($criteria);
-<<<<<<< HEAD
                 
-               
+                 //招生信息
+                $criteriaRe = new CDbCriteria();
+                $criteriaRe ->condition = 'cat_id = 4';
+                $criteriaRe ->order = 'id desc';
+                $criteriaRe ->limit = '3';
+                $this->recuitments = Article::model()->findAll($criteriaRe);
                 
-                 // 招生信息
-                $creteriaRe = new CDbCriteria();
-                $creteriaRe->condition = 'cat_id = 4';
-                $creteriaRe->order = 'id desc';
-                $creteriaRe->limit = '3';
-                $this->recuitments = Article::model()->findAll($creteriaRe);
-                
-                 //公司招聘
-                 $creteriaZh = new CDbCriteria();
-                $creteriaZh->condition = 'maincat_id = 13';
-                $creteriaZh->order = 'id desc';
-                $creteriaZh->limit = '3';
-                $this->invites = Article::model()->findAll($creteriaZh);
+                 //招聘信息
+                $criteriaZh = new CDbCriteria();
+                $criteriaZh ->condition = 'maincat_id = 13';
+                $criteriaZh ->order = 'id desc';
+                $criteriaZh ->limit = '3';
+                $this->invites = Article::model()->findAll($criteriaZh);
                 
                  //联系我们
-                 $creteriaCon = new CDbCriteria();
-                $creteriaCon->order = 'id desc';
-                $this->connect = Connect::model()->findAll($creteriaCon);
+                $criteriaCon = new CDbCriteria();
+                $criteriaCon ->order = 'id desc';
+                $this->connect = Connect::model()->findAll($criteriaCon);
                 
-               
-                
-=======
 
->>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		$view_file = strtolower(str_replace(' ', '_', $category->list_layout));
 		$this->render($view_file, array(
 			'articles' => $articles,

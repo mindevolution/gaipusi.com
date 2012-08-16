@@ -12,17 +12,17 @@
  */
 class ArticleHelper
 {
-	static public function getImageRealPath(Article $article)
+	static public function getImageRealPath(CActiveRecord $article)
 	{
 		return Yii::getPathOfAlias('images').DS.$article->pic;
 	}
 
-	static public function hasImage(Article $article)
+	static public function hasImage(CActiveRecord $article)
 	{
 		return is_file(ArticleHelper::getImageRealPath($article));
 	}
 
-	static public function renderThumbnail(Article $article, $width, $height)
+	static public function renderThumbnail(CActiveRecord $article, $width, $height)
 	{
 		if(is_file(ArticleHelper::getImageRealPath($article)))
 		{

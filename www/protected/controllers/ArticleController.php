@@ -45,6 +45,10 @@ class ArticleController extends MController
 
 		// 得到当前的分类和子分类
 		$this->category = CategoryHelper::getCategory($cid);
+		if($this->category->list_layout == 'Staff List')
+		{
+			redirect('teacher/list/cid/'.$cid);
+		}
 		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 

@@ -6,7 +6,9 @@
                                 
                         )); ?>
         </div>
-        <form><input type="text" value="" /></form>
+				<?php echo CHtml::beginForm(url('article/search'), 'get'); ?>
+				<?php echo CHtml::textField('search'); ?>
+			<?php echo CHtml::endForm(); ?>
     	<ul>
         	<li>
             	<dl>

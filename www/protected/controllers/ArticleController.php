@@ -92,6 +92,32 @@ class ArticleController extends MController
 		));
 	}
 
+	public function actionSearch ()
+	{
+    add_css('css/article-list.css');
+		$cat_id = 1;
+		if(Yii::app()->getLanguage() == 'en_us') {
+			$cat_id = 5;
+		}
+		$this->category = CategoryHelper::getCategory($cat_id);
+		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($cat_id));
+		$this->breadcrumb_data = array(t('Searching Result'));
+		$criteria = new CDbCriteria();
+		$criteria->order = 'id desc';
+		$search = $_GET['search'];
+		$criteria->condition = 'title like "%'.$search.'%" OR  body like "%'.$search.'%"';
+		$count = Article::model()->count($criteria);
+		$pager = new CPagination($count);
+		$pager->pageSize = 3;
+		$pager->applyLimit($criteria);
+		$articles = Article::model()->findAll($criteria);
+
+		$this->render('news_list', array(
+			'articles' => $articles,
+			'pages' => $pager,
+		));
+	}
+
 	// Uncomment the following methods and override them if needed
 	/*
 	  public function filters()

@@ -33,6 +33,26 @@ class ArticleController extends MController
 		{
 			$pagePreNextArray[] = '下一篇:' . l($nextArticle->title, 'article/view/id/' . $nextArticle->id);
 		}
+                //招生信息
+                $criteriaRe = new CDbCriteria();
+                $criteriaRe ->condition = 'cat_id = 4';
+                $criteriaRe ->order = 'id desc';
+                $criteriaRe ->limit = '3';
+                $this->recuitments = Article::model()->findAll($criteriaRe);
+                
+                 //招聘信息
+                $criteriaZh = new CDbCriteria();
+                $criteriaZh ->condition = 'maincat_id = 13';
+                $criteriaZh ->order = 'id desc';
+                $criteriaZh ->limit = '3';
+                $this->invites = Article::model()->findAll($criteriaZh);
+                
+                 //联系我们
+                $criteriaCon = new CDbCriteria();
+                $criteriaCon ->order = 'id desc';
+                $this->connect = Connect::model()->findAll($criteriaCon);
+                
+                
 
 		$this->render('index', array(
 			'article' => $article,
@@ -84,6 +104,26 @@ class ArticleController extends MController
 		$pager->pageSize = 3;
 		$pager->applyLimit($criteria);
 		$articles = Article::model()->findAll($criteria);
+                
+                 //招生信息
+                $criteriaRe = new CDbCriteria();
+                $criteriaRe ->condition = 'cat_id = 4';
+                $criteriaRe ->order = 'id desc';
+                $criteriaRe ->limit = '3';
+                $this->recuitments = Article::model()->findAll($criteriaRe);
+                
+                 //招聘信息
+                $criteriaZh = new CDbCriteria();
+                $criteriaZh ->condition = 'maincat_id = 13';
+                $criteriaZh ->order = 'id desc';
+                $criteriaZh ->limit = '3';
+                $this->invites = Article::model()->findAll($criteriaZh);
+                
+                 //联系我们
+                $criteriaCon = new CDbCriteria();
+                $criteriaCon ->order = 'id desc';
+                $this->connect = Connect::model()->findAll($criteriaCon);
+                
 
 		$view_file = strtolower(str_replace(' ', '_', $category->list_layout));
 		$this->render($view_file, array(

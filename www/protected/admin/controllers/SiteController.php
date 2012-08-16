@@ -101,7 +101,7 @@ class SiteController extends Controller
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
-				$this->redirect(array('article/admin'));
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));
@@ -117,11 +117,7 @@ class SiteController extends Controller
 	}
 	
 	  /**
-<<<<<<< HEAD
-         * ???????
-=======
          * ������ҳ
->>>>>>> fbacca4f68a0bbba83a869759a26610c9322ab9d
          */
         public function actionDefault()
         {
@@ -133,11 +129,7 @@ class SiteController extends Controller
                 }
         }
     /**
-<<<<<<< HEAD
-         * ??????? Head
-=======
          * ������ҳ Head
->>>>>>> fbacca4f68a0bbba83a869759a26610c9322ab9d
          */
         public function actionHead()
         {
@@ -149,11 +141,7 @@ class SiteController extends Controller
                 }
         }
     /**
-<<<<<<< HEAD
-         * ??????? left
-=======
          * ������ҳ left
->>>>>>> fbacca4f68a0bbba83a869759a26610c9322ab9d
          */
         public function actionLeft()
         {

@@ -8,13 +8,28 @@
 <link rel="stylesheet" type="text/css" href="css/index.css" />
 <script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/nav.js" type="text/javascript" charset="utf-8"></script>
-<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="css/ie6.css"/>
-    <script type="text/javascript" src="js/PNG.js"></script>
-    <script>
-        PNG.fix('.png');
-    </script>
-<![endif]-->
+ <SCRIPT LANGUAGE="JavaScript" src="http://float2006.tq.cn/floatcard?adminid=9409742&sort=0" ></SCRIPT>
+<!--jplayer start-->
+  <link rel="stylesheet" href="stylesheets/flarevideo.css" type="text/css">
+  <link rel="stylesheet" href="stylesheets/flarevideo.default.css" type="text/css">
+  <script src="javascripts/jquery.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.ui.slider.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.flash.js" type="text/javascript"></script>
+  <script src="javascripts/flarevideo.js" type="text/javascript"></script>  
+  <script type="text/javascript" charset="utf-8">
+    jQuery(function($){
+      fv = $(".video-play").flareVideo();
+      fv.load([
+        {
+          src:  'http://flarevideo.com/flarevideo/examples/volcano.mp4',
+          type: 'video/mp4'
+        }
+      ]);
+    })
+  </script>
+ 
+</head>
+<!--jplayer end-->
 </head>
 <body>
     <?php include 'header.php'; ?>
@@ -34,8 +49,7 @@
         </ul>
     </div>
     <div class="video">
-    	<div class="pic"><img src="img/pic.jpg" width="418" height="234" /></div>
-        <!--<div class="video-play"><img src="img/video.jpg" width="418" height="263" /></div>-->
+       <div class="video-play"></div>
         <ul>
         	<li><a href="" target="_self" class="png">异象和使命</a></li>
             <li><a href="" target="_self" class="png">公司业务</a></li>
@@ -49,7 +63,9 @@
             <dd>010-67996448</dd>
             <dd>010-81671861</dd>
         </dl>
-        <div class="zixun"><a href="" target="_blank">在线咨询</a></div>
+        <div class="zixun">
+            <IMG src="http://sysimages.tq.cn/images/kefu12.gif" id="tq_kefu_main" version="20100823" style="background:transparent none repeat scroll 0% 0%;cursor:pointer" onclick="TQKF.kefuimg.Distrabute()" />
+        </div>
     </div>
     <div style="clear:both"></div>
 </div>

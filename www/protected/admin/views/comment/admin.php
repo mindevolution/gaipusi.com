@@ -7,8 +7,6 @@ $this->breadcrumbs=array(
 	'评论管理',
 );
 
-
-
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
 	$('.search-form').toggle();

@@ -47,8 +47,8 @@ $('.search-form form').submit(function(){
 		'title',
 		'body',
 		'hits',
-		'is_show',
-		/*
+		/*'is_show',
+		
 		'author',
 		'pic',
 		'datetime',

@@ -13,28 +13,33 @@
         	<li>
             	<dl>
                 	<dt><h2><img src="img/bg-title-l.png" width="32" height="16" class="png" />招生信息<img src="img/bg-title-r.png" width="32" height="16" class="png" /></h2></dt>
-                    <dd><a href="" target="_blank">即将举办2010年复活节</a></dd>
-                    <dd><a href="" target="_blank">庆祝09年圣诞晚会圆满成功</a></dd>
-                    <dd><a href="" target="_blank">成人英语SBS课时分析</a></dd>
+                        <?php foreach($this->recuitments as $row):?>
+                        
+                            <dd><?php echo l(nl2br($row->title), 'article/view/id/'.$row->id)?></dd>
+                        
+                          <?php endforeach;?>
+                        
                 </dl>
             </li>
             <li>
             	<dl>
                 	<dt><h2><img src="img/bg-title-l.png" width="32" height="16" class="png" />招聘信息<img src="img/bg-title-r.png" width="32" height="16" class="png" /></h2></dt>
-                    <dd><a href="" target="_blank">即将举办2010年复活节</a></dd>
-                    <dd><a href="" target="_blank">庆祝09年圣诞晚会圆满成功</a></dd>
-                    <dd><a href="" target="_blank">成人英语SBS课时分析</a></dd>
+                   <?php foreach($this->invites as $value):?>
+                    <dd><?php echo l(nl2br($value->title), 'article/view/id/'.$value->id)?></dd>
+                    <?php endforeach;?>
                 </dl>
             </li>
             <li>
             	<dl>
                 	<dt><h2><img src="img/bg-title-l.png" width="32" height="16" class="png" />联系我们<img src="img/bg-title-r.png" width="32" height="16" class="png" /></h2></dt>
                     <dd>
-                    	<p>QQ：350660662</p>
-                        <p>电话：010-67996448 81671861</p>
-                        <p>邮箱：dukuizhen@163.com</p>
-                        <p>地址：北京市丰台区东高地万源路红星北里小区18号写字楼五层</p>
-                        <p>邮 编：100026</p>
+                         <?php foreach($this->connect as $rows):?>
+                    	<p>QQ:<?php echo $rows->QQ;?></p>
+                        <p>电话：<?php echo $rows->phone;?></p>
+                        <p>邮箱：<?php echo $rows->email;?></p>
+                        <p>地址：<?php echo $rows->address;?></p>
+                        <p>邮编：<?php echo $rows->youbian;?></p>
+                        <?php endforeach;?>
                     </dd>
                 </dl>
             </li>

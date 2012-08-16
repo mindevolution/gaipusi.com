@@ -73,8 +73,9 @@ class ArticleController extends BController
 			if($model->save())
 			{
                             $model->pic->saveAs(Yii::app()->basePath.'/../images/'.$model->pic);
-			}
+                        }
 				$this->redirect(array('view','id'=>$model->id));
+                             
 		}
 
 		$this->render('create',array(

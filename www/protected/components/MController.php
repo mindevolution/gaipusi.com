@@ -13,6 +13,9 @@
 class MController extends Controller {
 
     public $navigation = array();
+    public $recuitments = array();
+    public $invites = array();
+    public $connect = array();
     public $child = array();
 		public $category;
 		public $sub_category;

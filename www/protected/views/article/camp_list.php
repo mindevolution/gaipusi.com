@@ -1,11 +1,5 @@
 <?php
-<<<<<<< HEAD
-$this->breadcrumbs = array(
-	'文章列表'
-);
-=======
 $this->breadcrumbs = $this->breadcrumb_data;
->>>>>>> fbacca4f68a0bbba83a869759a26610c9322ab9d
 ?>
     <div class="main">
         <div class="yinghui-block">
@@ -15,39 +9,16 @@ $this->breadcrumbs = $this->breadcrumb_data;
                 	<ul>
      									<?php foreach($articles as $article):?>
                     	<li>
-                        	<a href="<?php echo url('article/view/id/'.$article->id); ?>" target="_blank" class="pic" ><img src="img/pic-yinghui.jpg" width="217"  /></a>
+											<?php if(ArticleHelper::hasImage($article)): ?>
+												<a class="pic" href="<?php echo url('article/view/id/'.$article->id); ?>" target="_blank">
+													<?php echo ArticleHelper::renderThumbnail($article, '217', '150'); ?>
+												</a>
+											<?php endif; ?>
                             <h1><?php echo $article->title; ?></h1>
-                            <p><?php // echo $article->description; ?></p>
+                            <p><?php echo mb_substr(strip_tags($article->body), 0, 50, 'UTF-8'); ?>...</p>
                             <h6><a href="<?php echo url('article/view/id/'.$article->id); ?>" target="_blank">了解详情&gt;&gt;</a></h6>
                         </li>
 												<?php endforeach; ?>
-                    </ul>
-                </dd>
-            </dl>
-        </div>
-        <div class="yinghui-block block-last">
-        	<dl>
-            	<dt><h1>往期营会活动</h1><span><a href="" target="_self" >更多&nbsp;>></a></span></dt>
-                <dd>
-                	<ul>
-                    	<li>
-                        	<a href="" target="_blank" class="pic" ><img src="img/pic-yinghui.jpg" width="217"  /></a>
-                            <h1>2009年圣诞晚会</h1>
-                            <p>2009年圣诞晚会圆满的在本校举行，在活动期间，学生、家长和教师们都表现出了极大的热的表演活动。</p>
-                            <h6><a href="" target="_blank">了解详情&gt;&gt;</a></h6>
-                        </li>
-                        <li>
-                        	<a href="" target="_blank" class="pic" ><img src="img/pic-yinghui.jpg" width="217"  /></a>
-                            <h1>2009年圣诞晚会</h1>
-                            <p>2009年圣诞晚会圆满的在本校举行，在活动期间，学生、家长和教师们都表现出了极大的热的表演活动。</p>
-                            <h6><a href="" target="_blank">了解详情&gt;&gt;</a></h6>
-                        </li>
-                        <li class="li-last">
-                        	<a href="" target="_blank" class="pic" ><img src="img/pic-yinghui.jpg" width="217"  /></a>
-                            <h1>2009年圣诞晚会</h1>
-                            <p>2009年圣诞晚会圆满的在本校举行，在活动期间，学生、家长和教师们都表现出了极大的热的表演活动。</p>
-                            <h6><a href="" target="_blank">了解详情&gt;&gt;</a></h6>
-                        </li>
                     </ul>
                 </dd>
             </dl>

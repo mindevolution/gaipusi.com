@@ -20,7 +20,7 @@
 		<div id="top">
 		<div class="top_logo"><img src="images/logo.png"/></div>
 			<div class="top_bg">
-				<div class="font-1"> 您好，<!--现在时间是： <span id="js_get_cur_time"></span>--> &nbsp;&nbsp;<a target="_blank" href="../">访问首页</a> | <a href="logout.php">退出系统</a></div>
+				<div class="font-1"> 您好，<!--现在时间是： <span id="js_get_cur_time"></span>--> &nbsp;&nbsp;<a target="_blank" href="www.baidu.com">访问首页</a> | <a href="">退出系统</a></div>
 			</div>
 		</div>
 		<div style="clear:both;"></div>
@@ -54,16 +54,10 @@
 
 						<li class="parent "><a onclick="hidediv('div_menu_mix')" href="javascript:void(0)">综合管理</a>
 							<ul id="div_menu_mix" style="display:none;" class="menu_second">
-
-								<li><a href="/manager/pic_links.php">图片链接</a></li>
-								<li><a href="/manager/aboutus.php">关于我们</a></li>
-								<li><a href="/manager/contactus.php">联系我们</a></li>
-								<li><a href="/manager/article_general.php?cat_id=statement">赞助支持</a></li>
-								<li><a href="/manager/article_general.php?cat_id=contributions">欢迎投稿</a></li>
-								<li><a href="/manager/privacy.php">隐私条款</a></li>
-								<li><a href="/manager/data_export.php">文章数据导出</a></li>
-								<li><a href="/manager/website_config.php">网站设置</a></li>
-								<li><a href="/manager/cache.php">cache</a></li>
+								<li><a href="admin.php?r=connect/admin">联系我们</a></li>
+								<li><a href="#">赞助支持</a></li>
+								<li><a href="#">隐私条款</a></li>
+								<li><a href="#">网站设置</a></li>
 							</ul>
 						</li>
 

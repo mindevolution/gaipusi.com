@@ -2305,3 +2305,92 @@ Stack trace:
 REQUEST_URI=/gaipusi.com/www/admin.php?r=article
 HTTP_REFERER=http://localhost/gaipusi.com/www/admin.php
 ---
+2012/08/15 02:58:54 [error] [php] include(操作.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (D:\wamp\www\gaipusi\www\yii\framework\YiiBase.php:423)
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\YiiBase.php(198): import()
+#1 D:\wamp\www\gaipusi\www\yii\framework\zii\widgets\grid\CGridView.php(334): createComponent()
+#2 D:\wamp\www\gaipusi\www\yii\framework\zii\widgets\grid\CGridView.php(305): CGridView->initColumns()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(148): CGridView->init()
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(173): ConnectController->createWidget()
+#5 D:\wamp\www\gaipusi\www\protected\admin\views\connect\admin.php(50): ConnectController->widget()
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): ConnectController->renderInternal()
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(870): ConnectController->renderFile()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(783): ConnectController->renderPartial()
+#10 D:\wamp\www\gaipusi\www\protected\admin\controllers\ConnectController.php(143): ConnectController->render()
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ConnectController->actionAdmin()
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): ConnectController->runAction()
+#14 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#16 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): ConnectController->filterAccessControl()
+#17 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#18 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#19 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): ConnectController->runActionWithFilters()
+#20 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): ConnectController->run()
+#21 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController()
+#22 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 D:\wamp\www\gaipusi\www\admin.php(13): CWebApplication->run()
+REQUEST_URI=/gaipusi/www/admin.php?r=connect/admin
+in D:\wamp\www\gaipusi\www\protected\admin\views\connect\admin.php (50)
+in D:\wamp\www\gaipusi\www\protected\admin\controllers\ConnectController.php (143)
+in D:\wamp\www\gaipusi\www\admin.php (13)
+2012/08/15 03:01:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('update')
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('connect/update')
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=connect/update
+---
+2012/08/15 03:03:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message '您的请求无效。' in D:\wamp\www\gaipusi\www\yii\framework\web\CController.php:337
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('view')
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('connect/view')
+#10 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=connect/view
+---
+2012/08/15 08:52:13 [error] [exception.CException] exception 'CException' with message '属性 "CWebApplication.logout" 未被定义.' in D:\wamp\www\gaipusi\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\base\CModule.php(106): CComponent->__get('logout')
+#1 D:\wamp\www\gaipusi\www\protected\admin\views\layouts\admin.php(23): CModule->__get('logout')
+#2 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(127): require('D:\wamp\www\gai...')
+#3 D:\wamp\www\gaipusi\www\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('D:\wamp\www\gai...', Array, true)
+#4 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(785): CBaseController->renderFile('D:\wamp\www\gai...', Array, true)
+#5 D:\wamp\www\gaipusi\www\protected\admin\controllers\ConnectController.php(143): CController->render('admin', Array)
+#6 D:\wamp\www\gaipusi\www\yii\framework\web\actions\CInlineAction.php(50): ConnectController->actionAdmin()
+#7 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 D:\wamp\www\gaipusi\www\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(292): CFilterChain->run()
+#14 D:\wamp\www\gaipusi\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(283): CController->run('admin')
+#16 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('connect/admin')
+#17 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 D:\wamp\www\gaipusi\www\admin.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/gaipusi/www/admin.php?r=connect/admin
+HTTP_REFERER=http://localhost/gaipusi/www/admin.php?r=category/admin
+---

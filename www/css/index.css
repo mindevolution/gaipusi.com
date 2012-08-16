@@ -21,8 +21,8 @@
 .lang-ul li a { display:inline-block; width:80px; height:28px; line-height:28px; overflow:hidden; background:url(../img/btn-block.png) repeat-x; color:#dbdbdb;}
 .lang-ul li a:hover { background:url(../img/btn-block.png) repeat-x 0px -28px;}
 
-#content .video { float:left; padding-top:79px;}
-#content .video .pic,.video .video-play { width:418px; height:263px; margin-bottom:22px;}
+#content .video { float:left;}
+#content .video .video-play { margin-top:50px; width:418px; height:263px; margin-bottom:22px; -webkit-box-shadow: 0 0 20px #000; -moz-box-shadow: 0 0 20px #000; overflow: none;}
 #content .video ul { padding-left:15px;}
 #content .video li { float:left; padding-right:45px;}
 #content .video li.last { padding-right:0px;}

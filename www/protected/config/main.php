@@ -1,7 +1,7 @@
 <?php
 require "globals.php";
 // uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
+Yii::setPathOfAlias('images',realpath(dirname(__FILE__).'/../../images'));
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
@@ -19,6 +19,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.helpers.*',
 	),
 
 	'modules'=>array(
@@ -35,6 +36,13 @@ return array(
 
 	// application components
 	'components'=>array(
+		'image'=>array(
+			'class'=>'application.extensions.image.CImageComponent',
+				// GD or ImageMagick
+				'driver'=>'GD',
+				// ImageMagick setup path
+				'params'=>array('directory'=>'/opt/local/bin'),
+		),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,

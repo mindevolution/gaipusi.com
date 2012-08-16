@@ -13,9 +13,7 @@ $this->breadcrumbs = $this->breadcrumb_data;
 									</a>
 								<?php endif; ?>
                     <div class="article">
-                    	<h2><?php echo l(nl2br($article->title), 'article/view/id/'.$article->id); ?></h2>
-                        <h6>撰稿人：<span class="writter"><?php echo $article->author;?></span>&nbsp;&nbsp;浏览次数：<span class="number"><?php echo $article->hits;?></span>&nbsp;&nbsp;发布日期：<span class="day"><?php echo $article->datetime;?></span> </h6>
-                        <p><?php echo $article->body;?></p>
+                    	<h2><?php echo l(nl2br($article->name), 'article/view/id/'.$article->id); ?></h2>
                     </div>
                     <div class="clear"></div>
                 </li>

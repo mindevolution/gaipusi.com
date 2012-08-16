@@ -5358,3 +5358,23 @@ REQUEST_URI=/gaipusi/www/index.php?r=apply/create
 in D:\wamp\www\gaipusi\www\protected\views\layouts\left.php (3)
 in D:\wamp\www\gaipusi\www\protected\views\layouts\article-list.php (23)
 in D:\wamp\www\gaipusi\www\protected\controllers\ApplyController.php (85)
+2012/08/16 07:36:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in D:\wamp\www\gaipusi\www\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 D:\wamp\www\gaipusi\www\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 D:\wamp\www\gaipusi\www\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 D:\wamp\www\gaipusi\www\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 D:\wamp\www\gaipusi\www\yii\framework\db\ar\CActiveRecord.php(619): CApplication->getDb()
+#5 D:\wamp\www\gaipusi\www\yii\framework\db\ar\CActiveRecord.php(2262): CActiveRecord->getDbConnection()
+#6 D:\wamp\www\gaipusi\www\yii\framework\db\ar\CActiveRecord.php(383): CActiveRecordMetaData->__construct(Object(Category))
+#7 D:\wamp\www\gaipusi\www\protected\models\Category.php(23): CActiveRecord::model('Category')
+#8 D:\wamp\www\gaipusi\www\protected\components\MController.php(36): Category::model()
+#9 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(360): MController->__construct('site', NULL)
+#10 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(277): CWebApplication->createController('site/index')
+#11 D:\wamp\www\gaipusi\www\yii\framework\web\CWebApplication.php(142): CWebApplication->runController('site/index')
+#12 D:\wamp\www\gaipusi\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 D:\wamp\www\gaipusi\www\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/gaipusi/www/index.php?r=site/index&lang=en_us
+HTTP_REFERER=http://localhost/gaipusi/www/index.php
+---

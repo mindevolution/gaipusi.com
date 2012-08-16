@@ -12,7 +12,6 @@ class CContactForm extends CWidget
 	 */
 	public function run()
 	{
-		echo "abcd``";
 	}
 
 }

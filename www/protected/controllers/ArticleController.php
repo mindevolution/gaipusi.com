@@ -21,6 +21,7 @@ class ArticleController extends MController
 		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 		$this->breadcrumb_data[] = $article->title;
+<<<<<<< HEAD
 
 		$preArticle = Article::getPreArticle($article);
 		$pagePreNextArray = array();
@@ -58,11 +59,30 @@ class ArticleController extends MController
 			'article' => $article,
 			'pagePreNext' => $pagePreNextArray,
                         
+=======
+
+		$preArticle = Article::getPreArticle($article);
+		$pagePreNextArray = array();
+		if ($preArticle)
+		{
+			$pagePreNextArray[] = '上一篇:' . l($preArticle->title, 'article/view/id/' . $preArticle->id);
+		}
+		$nextArticle = Article::getNextArticle($article);
+		if ($nextArticle)
+		{
+			$pagePreNextArray[] = '下一篇:' . l($nextArticle->title, 'article/view/id/' . $nextArticle->id);
+		}
+
+		$this->render('index', array(
+			'article' => $article,
+			'pagePreNext' => $pagePreNextArray,
+>>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		));
 	}
 
 	public function actionList($cid = null)
 	{
+<<<<<<< HEAD
 
 		// 得到当前的分类和子分类
 		$this->category = CategoryHelper::getCategory($cid);
@@ -73,6 +93,18 @@ class ArticleController extends MController
 		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
 		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
 
+=======
+
+		// 得到当前的分类和子分类
+		$this->category = CategoryHelper::getCategory($cid);
+		if($this->category->list_layout == 'Staff List')
+		{
+			redirect('teacher/list/cid/'.$cid);
+		}
+		$this->sub_category = CategoryHelper::menuItems(CategoryHelper::getSubCategory($this->category->id));
+		$this->breadcrumb_data = CategoryHelper::getBreadcrumb($cid);
+
+>>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		$criteria = new CDbCriteria();
 		if ($cid)
 		{
@@ -105,6 +137,7 @@ class ArticleController extends MController
 		$pager->pageSize = 3;
 		$pager->applyLimit($criteria);
 		$articles = Article::model()->findAll($criteria);
+<<<<<<< HEAD
                 
                
                 
@@ -129,6 +162,9 @@ class ArticleController extends MController
                 
                
                 
+=======
+
+>>>>>>> 07c0e3d5674336a923c984e17795eb42ae42542e
 		$view_file = strtolower(str_replace(' ', '_', $category->list_layout));
 		$this->render($view_file, array(
 			'articles' => $articles,
